@@ -1,3 +1,7 @@
+Composer version 2.3.4 2022-04-07 21:16:35
+PHP 8.1.4 (cli) (built: Mar 16 2022 09:33:31) (ZTS Visual C++ 2019 x64)
+Laravel v9.12.2 (PHP v8.1.4)
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
 
 <p align="center">
