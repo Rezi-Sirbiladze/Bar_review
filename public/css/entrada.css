@@ -26,9 +26,12 @@ h1{
 }
 .intro{
     width:100%;
-    height: 70vh;
+    height: 80vh;
     background: linear-gradient(90deg, rgba(2,0,36,1) 0%,
     rgba(195,246,81,1) 0%, rgba(0,212,255,1) 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 .container{
     width: 100%;
@@ -76,7 +79,8 @@ h1{
 
 /*  TITULO   */
 .container-title{
-    width: 70%;
+    width: 100%;
+    max-width: 800px;
     margin: 0 auto;
 }
 
@@ -86,4 +90,377 @@ h1{
     color: white;
     text-align: center;
     line-height: 1.2;
+}
+
+.title::after{
+    content: "";
+    display:block;
+    width: 70px;
+    height: 4px;
+    background-color: #fff;
+    margin: 50px auto 0;
+}
+
+.cuenta{
+    display: inline-block;
+    border: 4px solid white;
+    padding: 10px 35px;
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    position: relative;
+    top: 70px;
+    left: 38%;
+    right: 0;
+    transition: color,background .2s linear;
+}
+
+.cuenta:hover{
+    color: black;
+    border: 4px solid white;
+    background-color: white;
+}
+
+
+/* ITEMS   */
+.slider{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 200px;
+}
+.item{
+    width: 24%;
+    font-size: 18px;
+    text-transform: uppercase;
+    padding: 10px 25px;
+    border-top: 4px solid white;
+    color: white;
+}
+
+.item b{
+    font-size: 24px;
+}
+
+
+/* SOBRE NOSOTROS        */
+.about-container{
+    width: 100%;
+    max-width: 900px;
+    margin: 50px auto 50px;
+}
+
+.title_description{
+    margin-top: 30px;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 24px;
+}
+
+.title_description::after{
+    content:"";
+    display:block;
+    width: 70px;
+    height: 4px;
+    background-color:red;
+    margin:40px auto 0;
+}
+
+.description{
+    text-align:center;
+    font-size: 15px;
+    color:#999;
+}
+
+.title_rate{
+    text-align: center;
+    margin-top: 50px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+
+/*     SOBRE NOSOTROS COCINA   */
+.kitchen{
+    width:90%;
+    margin:0 auto;
+    display:flex;
+    justify-content: space-between;
+}
+.food{
+    width:30%;
+    margin-top: 20px;
+    background: linear-gradient(0deg, rgba(2,0,36,1) 0%, 
+    rgba(238,215,137,1) 0%, rgba(232,142,131,1) 100%);
+    position: relative;
+}
+
+.inner_food{
+    width: 100%;
+    height: 100%;
+}
+
+.img_food{
+    width:100%;
+    height:270px;
+}
+.separation{
+    width: 40%;
+    height: 4px;
+    background-color: red;
+    margin: 50px auto;
+}
+
+
+
+
+/*   RESTAURANTES COCINA      */
+.inner_food{
+    height:270px;
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%,
+    rgba(195,246,81,1) 0%, rgba(0,212,255,1) 100%);
+}
+
+.food:hover .inner_food img{
+    opacity: .2;
+}
+.food .inner_food{
+    transition: transform .2s linear;
+}
+
+.food:hover .food_info{
+    opacity: 1;
+    cursor: pointer;
+}
+
+.food:hover .inner_food{
+    transform: translate3d(-20px, -20px, 0);
+    cursor: pointer;
+}
+
+.food_info{
+    color:white;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 23px;
+    text-align: center;
+    position: absolute;
+    width: 100%;
+    top: 40%;
+    left: 0;
+    z-index: 2;
+    transform: translate3d(0, -40%, 0);
+    opacity: 0;
+    transition: opacity .2s linear;
+}
+
+
+
+/*   LOGROS   */
+.achievements{
+    margin-top: 150px;
+}
+
+.achievements_title{
+    text-align: center;
+    color: black;
+    font-weight: bold;
+    font-size: 24px;
+    
+}
+.stat{
+    display:flex;
+    justify-content: space-around;
+    background-color: #95e1d3;
+}
+
+.stat_item{
+    width: 20%;
+    border-left: 4px solid #b5eae0;
+    text-align: center;
+    color: white;
+    padding: 80px 35px;
+}
+
+.stat_count, .stat_item{
+    margin:0 auto;
+}
+
+.stat_item{
+    font-size: 70px;
+    font-weight: bold;
+
+}
+
+.stat_text{
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+
+
+
+/*  **Contactos  */     
+
+
+
+/*   **SECCION 1   */
+
+.footer_inner{
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer_sec1{
+    width:40%;
+}
+
+.footer_sec2{
+    width: 30%;
+}
+
+.footer_sec3{
+    width: 25%;
+}
+
+.contacts{
+    background-color: #f8f8f8;
+    padding: 65px;
+}
+
+.footer_sec1 .logo{
+    font-size: 46px;
+    color: #ccc;
+    font-weight: bold;
+}
+
+.footer_social{
+    margin-bottom: 25px;
+}
+
+.footer_sec1 .footer_text{
+    font-size: 15px;
+    color: #999;
+}
+
+.followers{
+    font-size: 18px;
+    color: #333;
+
+    border-bottom: 2px solid #e5e5e5;
+    padding-bottom: 15px;
+}
+
+.social{
+    padding-top: 15px;
+    font-size: 15px;
+    color: #999;
+    font-style: italic;
+    font-weight: 300;
+}
+
+.social a i {
+    margin: 0 20px;
+    color: #95e1d3;
+}
+
+.subscribe{
+    width: 100%;
+    max-width: 450px;
+    display: flex;
+    justify-content: start;
+}
+
+.email_input{
+    background: #fff;
+    border: 2px solid #e7e7e7;
+    font-size:15px;
+    font-style: italic;
+    color: #ccc;
+    padding: 10px 12px;
+    height: 40px;
+    border-radius: 0%;
+    transition: border .2s;
+    width: 250px;
+}
+
+.email_input:focus{
+    outline: 0;
+    border: 2px solid #49bba6;
+}
+.subscribe_button{
+    height: 40px;
+    margin: 0;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: white;
+    padding: 10px 50px;
+    border:none;
+    background-color: #95e1d3;
+    cursor:pointer;
+    font-size: 14px;
+    transition: background, color .2s;
+}
+
+.subscribe_button:hover{
+    background-color: #49bba6;
+    color: black;
+}
+
+
+/*   **SECCION 2   */
+.footer_title{
+    text-transform: uppercase;
+    font-size: 16px;
+    color: #646464;
+    margin-bottom: 30px;
+}
+
+.article_item1, .article_item2, .article_item3{
+    display: flex;
+    align-items: center;
+    margin: 40px 0;
+}
+
+.article_content{
+    padding-left: 30px;
+}
+
+.article_content a {
+    font-size: 12px;
+    color: #333333;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: bold;
+    line-height: 1;
+}
+
+.articles .article_content .data{
+    font-size: 13px;
+    color: #999;
+    font-style: italic;
+}
+
+.articles img{
+    width: 120px;
+    height: 80px;
+}
+
+.articles img:hover{
+    cursor: pointer;
+}
+
+
+/*   **INSTAGRAM  **SECCION2    */
+
+.instagram_content{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 5px;
+    grid-row-gap: 5px;
+}
+
+.insta_img img{
+    width: 100%;
+    height: 100%;
 }
