@@ -21,6 +21,14 @@ Route::get('/entrada', function () {
     return view('entrada');
 });
 
+/*     prueba si funciona login  */
+
+Route::get('/entrar', function () {
+    return view('login');
+});
+
+/* **************************    */
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
