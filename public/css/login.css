@@ -1,0 +1,242 @@
+/*  AJUSTES PAGINA      */
+body{
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    color:000000;
+    line-height: 1.6;
+}
+
+*,
+*:after,
+*:before{
+    box-sizing: border-box;
+}
+
+/*       **Ajustes Formulario   */
+
+.container{
+    height: 100vh;
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%,
+    rgba(195,246,81,1) 0%, rgba(0,212,255,1) 100%);
+}
+
+.login{
+    width: 25%;
+    height: 60%;
+    position: relative;
+    top: 20%;
+    left: 37.5%;
+    border-radius: 40px 40px 40px 40px;
+    border: 2px solid #EFF0EF;
+}
+
+.login_title{
+    text-transform: uppercase;
+    font-size: 30px;
+    font-weight: lighter;
+    text-align: center;
+    padding-top: 25px;
+    color: #e9e8ea;
+    border-radius: 40px 40px 0px 0px;
+    height: 100px;
+    margin:0%;
+    background: #d4d3d7;
+}
+
+
+
+/*     ** input de email      */
+
+
+.email{
+    display:flex;
+    
+}
+
+.border_bottom_email{
+    width: 80%;
+    height: 2px;
+    background-color:white;
+    margin: 0 auto;
+}
+
+
+.email_icon{
+    width: 25px;
+    height: 25px;
+    margin: 80px 0 20px;
+    margin-left: 10px;
+}
+
+.email input{
+    width: 100%;
+    height: 90px;
+    margin-top: 20px;
+    padding-top:60px;
+    border: none;
+    background-color: transparent;
+    color: white;
+    margin-left: 15px;
+    font-size: 24px;
+}
+
+.email input:focus::placeholder{
+    color:transparent;
+}
+
+.email input:focus{
+    outline: none;
+}
+
+.email input::placeholder{
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 30px;
+}
+
+
+
+
+
+
+/*       input pass    */
+
+
+
+.pass{
+    display:flex;
+}
+
+.pass_icon{
+    width: 25px;
+    height: 25px;
+    margin: 70px 0 20px;
+    margin-left: 10px;
+}
+
+.pass input{
+    width: 100%;
+    height: 80px;
+    margin-top: 20px;
+    padding-top:60px;
+    border: none;
+    background-color: transparent;
+    color: white;
+    margin-left: 15px;
+    font-size: 24px;
+}
+
+.pass input:focus{
+    outline:none;
+}
+
+.pass input::placeholder{
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 30px;
+}
+
+.pass input:focus::placeholder{
+    color:transparent;
+}
+
+.border_bottom_pass{
+    width: 80%;
+    height: 2px;
+    background-color:white;
+    margin: 0 auto;
+}
+
+
+
+
+
+/*  opciones remember me y forgot pass    */
+
+
+.options{
+    display:flex;
+    justify-content: space-around;
+    height: 100px;
+}
+
+.check_remember{
+    padding-top: 40px;
+    display: flex;
+}
+
+.check_remember label{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    color: white;
+    margin-left: 15px;
+}
+
+.check_remember input[type="checkbox"]{
+    -webkit-appearance: none;
+    appearance: none;
+    margin: 0;
+    width: 25px;
+    height: 25px;
+    border: 1px solid white;
+    border-radius: 5px;
+    display: grid;
+    place-content: center;  
+}
+
+.check_remember input[type="checkbox"]::before {
+    content: "";
+    width: 15px;
+    height: 15px;
+    clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+    transform: scale(0);
+    transform-origin: bottom left;
+    transition: 120ms transform ease-in-out;
+    box-shadow: inset 1em 1em var(--form-control-color);
+    background-color: white;
+}
+
+.check_remember input[type="checkbox"]:checked::before {
+    transform: scale(1);
+}
+
+.forgot_pass {
+    text-decoration: none;
+    margin-top:40px;
+    font-family: 'Montserrat', sans-serif;
+    font-style: italic;
+    font-size: 16px;
+    color: white;
+}
+
+
+/* boton submit    */
+
+
+.button_login{
+    display: flex;
+    justify-content: center;
+}
+
+.button_login .submit{
+    height: 80px;
+    width: 240px;
+    border: none;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    font-size:32px;
+    color:white;
+    border-radius: 15px;
+    font-weight: bold;
+    background: transparent;
+    opacity:.3;
+    transition: border,color, opacity .5s;
+}
+
+.button_login .submit:hover{
+    cursor:pointer;
+    border: 2px solid white;
+    color:white;
+    opacity: 1;
+}
