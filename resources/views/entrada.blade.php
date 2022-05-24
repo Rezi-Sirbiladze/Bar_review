@@ -1,6 +1,3 @@
-
-<!--<img class="img_food" src="{{ asset('/img/georgia.jpg') }}" alt="">-->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -23,6 +20,8 @@
 </head>
 <body>
 
+
+
 <!--         NAVEGACION     -->
     <header class="header">
         <div class="container">
@@ -32,20 +31,20 @@
                     <a class="menu" href="#">Achievements</a>
                     <a class="menu" href="#">Contact</a>
                     <a class="menu" href="#">Buscador</a>
-                    <a class="menu" href="./login.html">Log in</a>
+                    <a class="menu" href="#">Log in</a>
                 </nav>
             </div>
         </div>
     </header>
 
-
+<!--                 BLOQUE PRINCIPAL      -->
     <div class="intro">
         <div class="container">
             <div class="container-title">
                 <h1 class="title">WELCOME TO BAR REVIEW</h1>
 
                 <!-- BOTON DE CREAR CUENTA  -->
-                <a class="cuenta" href="#">CREAR CUENTA</a>
+                <a class="cuenta" href="#popup">CREAR CUENTA</a>
             </div>
             <div class="slider">
                 <div href="#" class="item"><b>01</b>Intro</div>
@@ -55,6 +54,49 @@
             </div>
         </div>
     </div>
+
+
+    <!--      **VENTANA MODAL**      -->
+    <div class="popup" id="popup">
+        <div class="popup_body">
+            <div class="popup_content">
+                <a href="#" class="popup_close">X</a>
+                <div class="popup_title">TITULo POPUP</div>
+                <div class="popup_text">
+                    <div class="block_empresa">
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+                        Illo laborum sed voluptates repudiandae sapiente alias placeat. 
+                        Amet, enim assumenda? Nobis iusto molestias quae facilis aspernatur 
+                        praesentium quia reiciendis ad reprehenderit.
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                        Cumque, sit voluptatum ex possimus at quidem eligendi dolorem 
+                        reprehenderit distinctio, eos corrupti non? Aperiam quibusdam possimus 
+                        perferendis ipsum eius perspiciatis recusandae?
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                        Adipisci, explicabo. Dolores ipsam non eum officia esse expedita quibusdam 
+                        pariatur vel, voluptatem totam animi officiis molestiae! Quasi sunt 
+                        deserunt nesciunt numquam!
+                        <button class="account_empresa">Crear Empresa</button>
+                    </div>
+                    <div class="block_usuario">
+                        Lorem ipsum dolor sit, amet consectetur adipisicing 
+                        elit. Voluptates recusandae reprehenderit, aliquam distinctio inventore 
+                        iure obcaecati omnis ea cumque nemo voluptatem. Totam repudiandae officia 
+                        sed rerum, explicabo accusantium. Necessitatibus, blanditiis?
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                        Nesciunt et, laborum eaque distinctio nobis quasi explicabo voluptatum, 
+                        facere dicta aliquam iusto. At iusto excepturi neque tempore perferendis 
+                        ipsam quasi hic?
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                        Officiis vel officia iure delectus nobis temporibus repellat 
+                        voluptates quo quaerat ipsum vero assumenda dolores excepturi,
+                        possimus maxime neque laborum aut sit.
+                        <button class="account_usuario">Crear Usuario</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>  
 
 
     <!--      BLOQUE SOBRE NOSOTROS        -->
@@ -133,104 +175,109 @@
 
 <!--                     **FOOTER**               -->
 
-<footer class="contacts">
-    <div class="container_footer">
-        <div class="footer_inner">
-            <div class="footer_sec1">
-                <div class="logo">BAR Review</div>
-                <div class="footer_text">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                    Doloribus rem hic harum eligendi possimus temporibus, accusantium sit id nisi iste eveniet iusto, 
-                    eos debitis sint nobis impedit est ab. Officia!
+    <footer class="contacts">
+        <div class="container_footer">
+            <div class="footer_inner">
+                <div class="footer_sec1">
+                    <div class="logo">BAR Review</div>
+                    <div class="footer_text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                        Doloribus rem hic harum eligendi possimus temporibus, accusantium sit id nisi iste eveniet iusto, 
+                        eos debitis sint nobis impedit est ab. Officia!
+                    </div>
+                <!--       SECCION 1  SUBSCRIBE      -->
+                    <div class="footer_social">
+                        <p class="followers">
+                            <b>15k</b> Followers
+                        </p>
+                        <div class="social">
+                            Follow us:
+                            <a href="#">
+                                <i class="fa fa-facebook-official"></i>
+                                <i class="fa fa-instagram"></i>
+                                <i class="fa fa-twitter-square"></i>
+                                <i class="fa fa-envelope"></i>
+                                <i class="fa fa-google"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <form action="" class="subscribe">
+                        <input class="email_input" type="email" name="email" placeholder="Your email...">
+                        <button class="subscribe_button" type="submit">Subscribe</button>
+                    </form>
                 </div>
 
-                <div class="footer_social">
-                    <p class="followers">
-                        <b>15k</b> Followers
-                    </p>
-                    <div class="social">
-                        Follow us:
-                        <a href="#">
-                            <i class="fa fa-facebook-official"></i>
-                            <i class="fa fa-instagram"></i>
-                            <i class="fa fa-twitter-square"></i>
-                            <i class="fa fa-envelope"></i>
-                            <i class="fa fa-google"></i>
-                        </a>
-                    </div>
+
+                <!--       SECCION 2 BLOGS      -->
+                <div class="footer_sec2">
+                        <h3 class="footer_title">Blogs</h3>
+                        <div class="articles">
+                            <div class="article_item1">
+                                <img src="./img/georgia.jpg" alt="">
+                                <div class="article_content">
+                                    <a href="#">Lorem ipsum dolor sit amet,consectetur adipiscing</a>
+                                    <div class="data">LA fecha de subida</div>
+                                </div>
+                            </div>
+                            <div class="article_item2">
+                                <img src="./img/spain.jpg" alt="">
+                                <div class="article_content">
+                                    <a href="#">Lorem ipsum dolor sit amet,consectetur adipiscing</a>
+                                    <div class="data">LA fecha de subida</div>
+                                </div>
+                            </div>
+                            <div class="article_item3">
+                                <img src="./img/ucraine.webp" alt="">
+                                <div class="article_content">
+                                    <a href="#">Lorem ipsum dolor sit amet,consectetur adipiscing</a>
+                                    <div class="data">LA fecha de subida</div>
+                                </div>
+                            </div>
+                        </div>
                 </div>
 
-                <form action="" class="subscribe">
-                    <input class="email_input" type="email" name="email" placeholder="Your email...">
-                    <button class="subscribe_button" type="submit">Subscribe</button>
-                </form>
-            </div>
-            <div class="footer_sec2">
-                    <h3 class="footer_title">Blogs</h3>
-                    <div class="articles">
-                        <div class="article_item1">
-                            <img src="./img/georgia.jpg" alt="">
-                            <div class="article_content">
-                                <a href="#">Lorem ipsum dolor sit amet,consectetur adipiscing</a>
-                                <div class="data">LA fecha de subida</div>
-                            </div>
+                <!--         SECCION 3   INSTAGRAM      -->
+                <div class="footer_sec3">
+                        <h3 class="footer_title">Instagram</h3>
+                        <div class="instagram_content">
+                            <a class="insta_img" href="">
+                                <img src="./img/instagram/american 2.jpg" alt="" class="insta_img">
+                            </a>
+                            <a class="insta_img" href="">
+                                <img src="./img/instagram/australia.jpg" alt="" class="insta_img">
+                            </a>
+                            <a class="insta_img" href="">
+                                <img src="./img/instagram/australia2.jpg" alt="" class="insta_img">
+                            </a>
+                            <a class="insta_img" href="">
+                                <img src="./img/instagram/japan.jpg" alt="" class="insta_img">
+                            </a>
+                            <a class="insta_img" href="">
+                                <img src="./img/instagram/pizza.jpg" alt="" class="insta_img">
+                            </a>
+                            <a class="insta_img" href="">
+                                <img src="./img/instagram/Star Burger.jpg" alt="" class="insta_img">
+                            </a>
+                            <a class="insta_img" href="">
+                                <img src="./img/georgia.jpg" alt="" class="insta_img">
+                            </a>
+                            <a class="insta_img" href="">
+                                <img src="./img/spain.jpg" alt="" class="insta_img">
+                            </a>
+                            <a class="insta_img" href="">
+                                <img src="./img/ucraine.webp" alt="" class="insta_img">
+                            </a>
                         </div>
-                        <div class="article_item2">
-                            <img src="./img/spain.jpg" alt="">
-                            <div class="article_content">
-                                <a href="#">Lorem ipsum dolor sit amet,consectetur adipiscing</a>
-                                <div class="data">LA fecha de subida</div>
-                            </div>
-                        </div>
-                        <div class="article_item3">
-                            <img src="./img/ucraine.webp" alt="">
-                            <div class="article_content">
-                                <a href="#">Lorem ipsum dolor sit amet,consectetur adipiscing</a>
-                                <div class="data">LA fecha de subida</div>
-                            </div>
-                        </div>
-                    </div>
-            </div>
-            <div class="footer_sec3">
-                    <h3 class="footer_title">Instagram</h3>
-                    <div class="instagram_content">
-                        <a class="insta_img" href="">
-                            <img src="./img/instagram/american 2.jpg" alt="" class="insta_img">
-                        </a>
-                        <a class="insta_img" href="">
-                            <img src="./img/instagram/australia.jpg" alt="" class="insta_img">
-                        </a>
-                        <a class="insta_img" href="">
-                            <img src="./img/instagram/australia2.jpg" alt="" class="insta_img">
-                        </a>
-                        <a class="insta_img" href="">
-                            <img src="./img/instagram/japan.jpg" alt="" class="insta_img">
-                        </a>
-                        <a class="insta_img" href="">
-                            <img src="./img/instagram/pizza.jpg" alt="" class="insta_img">
-                        </a>
-                        <a class="insta_img" href="">
-                            <img src="./img/instagram/Star Burger.jpg" alt="" class="insta_img">
-                        </a>
-                        <a class="insta_img" href="">
-                            <img src="./img/georgia.jpg" alt="" class="insta_img">
-                        </a>
-                        <a class="insta_img" href="">
-                            <img src="./img/spain.jpg" alt="" class="insta_img">
-                        </a>
-                        <a class="insta_img" href="">
-                            <img src="./img/ucraine.webp" alt="" class="insta_img">
-                        </a>
-                    </div>
 
+                </div>
+            </div>
+
+            <div class="copyright">
+                C Bar Review all rights belongs to Ivan and Rezi <span>2022</span>
             </div>
         </div>
-
-        <div class="copyright">
-            C Bar Review all rights belongs to Ivan and Rezi <span>2022</span>
-        </div>
-    </div>
-</footer>
+    </footer>
 
 
 </body>
