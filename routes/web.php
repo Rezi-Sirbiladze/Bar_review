@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\EstablecimientoController;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,6 +27,8 @@ Route::get('/entrada', function () {
 Route::get('/entrar', function () {
     return view('login');
 });
+
+Route::resource('establecimientos', EstablecimientoController::class);
 
 /* **************************    */
 
