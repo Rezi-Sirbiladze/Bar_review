@@ -14,9 +14,7 @@
                     @if (Auth::user()->role == "cliente")
                         <p>Puntua ;)</p>
                     @else
-                    <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                         <a href="establecimientos">Ver mis establecimientos</a>
-                    </div>
                     @endif
                 </div>
             </div>

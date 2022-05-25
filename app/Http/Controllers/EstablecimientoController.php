@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Establecimiento;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class EstablecimientoController extends Controller
 {
@@ -14,7 +15,8 @@ class EstablecimientoController extends Controller
      */
     public function index()
     {
-        return view("mis_establecimientos");
+        $establecimientos = Establecimiento::select("*")->where("user_id", "=", Auth::id())->get();
+        return view("mis_establecimientos", compact('establecimientos'));
     }
 
     /**
@@ -35,16 +37,18 @@ class EstablecimientoController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $nivel = new Establecimiento(["user_id" => Auth::id(), "name" => $request["name"]]);
+        $nivel->saveOrFail();
+        return redirect()->route("establecimientos.index")->with(["mensaje" => "Establecimiento creado",]);
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Esctablecimiento  $esctablecimiento
+     * @param  \App\Models\Establecimiento  $Establecimiento
      * @return \Illuminate\Http\Response
      */
-    public function show(Esctablecimiento $esctablecimiento)
+    public function show(Establecimiento $Establecimiento)
     {
         //
     }
@@ -52,34 +56,36 @@ class EstablecimientoController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Esctablecimiento  $esctablecimiento
+     * @param  \App\Models\Establecimiento  $Establecimiento
      * @return \Illuminate\Http\Response
      */
-    public function edit(Esctablecimiento $esctablecimiento)
+    public function edit(Establecimiento $Establecimiento)
     {
-        //
+        return view("mi_establecimiento_editar", ["Establecimiento" => $Establecimiento]);
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Esctablecimiento  $esctablecimiento
+     * @param  \App\Models\Establecimiento  $Establecimiento
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Esctablecimiento $esctablecimiento)
+    public function update(Request $request, Establecimiento $Establecimiento)
     {
-        //
+        Establecimiento::where("id", $Establecimiento->id)->update(["name" => $request["name"]]);
+        return redirect()->route("establecimientos.index")->with(["mensaje" => "Establecimiento actualizado"]);
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Esctablecimiento  $esctablecimiento
+     * @param  \App\Models\Establecimiento  $Establecimiento
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Esctablecimiento $esctablecimiento)
+    public function destroy(Establecimiento $Establecimiento)
     {
-        //
+        Establecimiento::where("id", $Establecimiento->id)->delete();
+        return redirect()->route("establecimientos.index")->with(["mensaje" => "Establecimiento eliminado"]);
     }
 }
