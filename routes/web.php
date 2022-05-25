@@ -20,7 +20,7 @@ Route::get('/', function () {
 
 Route::get('/entrada', function () {
     return view('entrada');
-});
+})->name('entrada');
 
 /*     prueba si funciona login  */
 
@@ -28,7 +28,7 @@ Route::get('/entrar', function () {
     return view('login');
 });
 
-Route::resource('establecimientos', EstablecimientoController::class);
+Route::resource('/establecimientos', EstablecimientoController::class)->middleware(['auth']);
 
 /* **************************    */
 
