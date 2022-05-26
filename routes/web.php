@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\EstablecimientoController;
+use App\Http\Controllers\ValoracionController;
 
 /*
 |--------------------------------------------------------------------------
@@ -28,7 +29,14 @@ Route::get('/entrar', function () {
     return view('login');
 });
 
-Route::resource('/establecimientos', EstablecimientoController::class)->middleware(['auth']);
+Route::get('/establecimientos', [EstablecimientoController::class, 'indexAll'])->name('establecimientos')->middleware(['auth']);
+
+Route::resource('/mis_establecimientos', EstablecimientoController::class)->middleware(['auth']);
+
+Route::get('/valorar/{id}', [ValoracionController::class, 'indexValorar'])->name('valorar_establecimiento')->middleware(['auth']);
+
+Route::resource('/mis_valoraciones', ValoracionController::class)->middleware(['auth']);
+
 
 /* **************************    */
 

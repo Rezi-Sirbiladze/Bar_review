@@ -8,84 +8,50 @@ use Illuminate\Support\Facades\Auth;
 
 class EstablecimientoController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+    public function indexAll()
+    {
+        $establecimientos = Establecimiento::select("*")->get();
+        return view("all_establecimientos", compact('establecimientos'));
+    }
+
     public function index()
     {
         $establecimientos = Establecimiento::select("*")->where("user_id", "=", Auth::id())->get();
         return view("mis_establecimientos", compact('establecimientos'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function create()
     {
         //
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
     public function store(Request $request)
     {
-        $nivel = new Establecimiento(["user_id" => Auth::id(), "name" => $request["name"]]);
-        $nivel->saveOrFail();
-        return redirect()->route("establecimientos.index")->with(["mensaje" => "Establecimiento creado",]);
+        $establecimiento = new Establecimiento(["user_id" => Auth::id(), "name" => $request["name"]]);
+        $establecimiento->saveOrFail();
+        return redirect()->route("mis_establecimientos.index")->with(["mensaje" => "Establecimiento creado",]);
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\Establecimiento  $Establecimiento
-     * @return \Illuminate\Http\Response
-     */
     public function show(Establecimiento $Establecimiento)
     {
         //
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\Establecimiento  $Establecimiento
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Establecimiento $Establecimiento)
+    public function edit($id)
     {
-        return view("mi_establecimiento_editar", ["Establecimiento" => $Establecimiento]);
+        $Establecimiento = Establecimiento::select("*")->where("id", $id)->first();
+        return view("mi_establecimiento_editar", compact("Establecimiento"));
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Establecimiento  $Establecimiento
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, Establecimiento $Establecimiento)
+    public function update(Request $request, $id)
     {
-        Establecimiento::where("id", $Establecimiento->id)->update(["name" => $request["name"]]);
-        return redirect()->route("establecimientos.index")->with(["mensaje" => "Establecimiento actualizado"]);
+        Establecimiento::where("id", $id)->update(["name" => $request["name"]]);
+        return redirect()->route("mis_establecimientos.index")->with(["mensaje" => "Establecimiento actualizado"]);
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Models\Establecimiento  $Establecimiento
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(Establecimiento $Establecimiento)
+    public function destroy($id)
     {
-        Establecimiento::where("id", $Establecimiento->id)->delete();
-        return redirect()->route("establecimientos.index")->with(["mensaje" => "Establecimiento eliminado"]);
+        Establecimiento::where("id", $id)->delete();
+        return redirect()->route("mis_establecimientos.index")->with(["mensaje" => "Establecimiento eliminado"]);
     }
 }
