@@ -4,12 +4,12 @@
 
 @section('contenido')
 <div class="row">
-    <h1>Estableciminteos</h1>
+    <h1>Establecimientos</h1>
     @if(session('mensaje'))
         <h5>{{session('mensaje')}}</h5>
     @endif
     
-    <form method="post" action="{{ route('mis_establecimientos.store') }}"> 
+    <form method="post" action="{{ route('mis_valoraciones.store') }}"> 
         @csrf
         <label for="name">Nombre:</label>
         <input type="text" name="name" value="{{old('name')}}"/> 

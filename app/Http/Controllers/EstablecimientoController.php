@@ -27,8 +27,8 @@ class EstablecimientoController extends Controller
 
     public function store(Request $request)
     {
-        $nivel = new Establecimiento(["user_id" => Auth::id(), "name" => $request["name"]]);
-        $nivel->saveOrFail();
+        $establecimiento = new Establecimiento(["user_id" => Auth::id(), "name" => $request["name"]]);
+        $establecimiento->saveOrFail();
         return redirect()->route("mis_establecimientos.index")->with(["mensaje" => "Establecimiento creado",]);
     }
 

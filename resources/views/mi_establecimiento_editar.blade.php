@@ -4,7 +4,7 @@
 
 @section('contenido')
 <div class="row">
-    <h1>Editar Establecimientos</h1>
+    <h1>Editar Establecimiento</h1>
     <div class="col-12">
         <form method="POST" action="{{route("mis_establecimientos.update", [$Establecimiento->id])}}">
             @method("PUT")
