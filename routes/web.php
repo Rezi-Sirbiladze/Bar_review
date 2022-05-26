@@ -28,7 +28,11 @@ Route::get('/entrar', function () {
     return view('login');
 });
 
-Route::resource('/establecimientos', EstablecimientoController::class)->middleware(['auth']);
+Route::get('/establecimientos', [EstablecimientoController::class, 'indexAll'])->name('establecimientos')->middleware(['auth']);
+
+Route::resource('/mis_establecimientos', EstablecimientoController::class)->middleware(['auth']);
+
+
 
 /* **************************    */
 

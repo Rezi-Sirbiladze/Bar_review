@@ -14,7 +14,7 @@
                     @if (Auth::user()->role == "cliente")
                         <p>Puntua ;)</p>
                     @else
-                        <a href="establecimientos">Ver mis establecimientos</a>
+                        <a href="mis_establecimientos">Ver mis establecimientos</a>
                     @endif
                 </div>
             </div>
