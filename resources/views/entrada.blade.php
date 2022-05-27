@@ -26,10 +26,13 @@
 <!--         NAVEGACION     -->
 @include('layouts.nav')
 <!--                 BLOQUE PRINCIPAL      -->
+<h1>PRUEBA BRACH PRUEBA</h1>
     <div class="intro">
         <div class="container">
             <div class="container-title">
                 <h1 class="title">WELCOME TO BAR REVIEW</h1>
+
+                <a class="cuenta" href="#popup">CREAR CUENTA</a>
             </div>
             <div class="slider">
                 <div href="#" class="item"><b>01</b>Intro</div>
@@ -39,6 +42,49 @@
             </div>
         </div>
     </div>
+
+
+        <!--      **VENTANA MODAL**      -->
+        <div class="popup" id="popup">
+        <div class="popup_body">
+            <div class="popup_content">
+                <a href="#" class="popup_close">X</a>
+                <div class="popup_title">TITULo POPUP</div>
+                <div class="popup_text">
+                    <div class="block_empresa">
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+                        Illo laborum sed voluptates repudiandae sapiente alias placeat. 
+                        Amet, enim assumenda? Nobis iusto molestias quae facilis aspernatur 
+                        praesentium quia reiciendis ad reprehenderit.
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                        Cumque, sit voluptatum ex possimus at quidem eligendi dolorem 
+                        reprehenderit distinctio, eos corrupti non? Aperiam quibusdam possimus 
+                        perferendis ipsum eius perspiciatis recusandae?
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                        Adipisci, explicabo. Dolores ipsam non eum officia esse expedita quibusdam 
+                        pariatur vel, voluptatem totam animi officiis molestiae! Quasi sunt 
+                        deserunt nesciunt numquam!
+                        <button class="account_empresa">Crear Empresa</button>
+                    </div>
+                    <div class="block_usuario">
+                        Lorem ipsum dolor sit, amet consectetur adipisicing 
+                        elit. Voluptates recusandae reprehenderit, aliquam distinctio inventore 
+                        iure obcaecati omnis ea cumque nemo voluptatem. Totam repudiandae officia 
+                        sed rerum, explicabo accusantium. Necessitatibus, blanditiis?
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                        Nesciunt et, laborum eaque distinctio nobis quasi explicabo voluptatum, 
+                        facere dicta aliquam iusto. At iusto excepturi neque tempore perferendis 
+                        ipsam quasi hic?
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                        Officiis vel officia iure delectus nobis temporibus repellat 
+                        voluptates quo quaerat ipsum vero assumenda dolores excepturi,
+                        possimus maxime neque laborum aut sit.
+                        <button class="account_usuario">Crear Usuario</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>  
 
     <!--      BLOQUE SOBRE NOSOTROS        -->
     <section class="about">
