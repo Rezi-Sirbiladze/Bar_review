@@ -23,8 +23,6 @@
 </head>
 <body>
 
-
-
 <!--         NAVEGACION     -->
 @include('layouts.nav')
 <!--                 BLOQUE PRINCIPAL      -->
