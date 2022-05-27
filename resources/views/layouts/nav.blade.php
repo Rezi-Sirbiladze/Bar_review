@@ -18,6 +18,7 @@
                     @endif
                 @endauth
             @endif
+          <a class="nav-link" href="{{ route('establecimientos_ranking') }}">Ranking establecimientos</a>
         </div>
       </div>
     </div>

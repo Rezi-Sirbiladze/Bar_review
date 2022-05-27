@@ -8,6 +8,19 @@ use Illuminate\Support\Facades\Auth;
 
 class EstablecimientoController extends Controller
 {
+    public function indexRanking()
+    {
+        $TopEstablecimientos = Establecimiento::query()
+        ->join('valoraciones', 'valoraciones.establecimiento_id', '=', 'establecimientos.id')
+        ->selectRaw('establecimientos.id, avg(valoraciones.nota) AS media_nota')
+        ->groupBy(['establecimientos.id'])
+        ->orderByDesc('media_nota')
+        ->take(10)
+        ->get();
+
+        return view("top_establecimientos", compact('TopEstablecimientos'));
+    }
+
     public function indexAll()
     {
         $establecimientos = Establecimiento::select("*")->get();
