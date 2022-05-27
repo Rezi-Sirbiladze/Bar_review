@@ -12,6 +12,9 @@
         <li class="nav-item">
           <a class="nav-link" href="{{ route('establecimientos_ranking') }}">Ranking establecimientos</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{{ route('establecimientos') }}">Todos los establecimientos</a>
+        </li>
       </ul>
 
       <div class="dropdown">
