@@ -29,6 +29,10 @@
           @if (Route::has('login'))
           @auth
               <li><a href="{{ url('/dashboard') }}" class="dropdown-item">Dashboard</a></li>
+              <form method="POST" action="{{ route('logout') }}">
+                @csrf
+                <li><button onclick="event.preventDefault(); this.closest('form').submit();" class="dropdown-item">Logout</button></li>
+              </form>
               @else
               <li><a href="{{ route('login') }}" class="dropdown-item">Log in</a></li>
               @if (Route::has('register'))
