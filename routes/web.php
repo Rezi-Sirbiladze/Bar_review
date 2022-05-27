@@ -16,7 +16,7 @@ use App\Http\Controllers\ValoracionController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('entrada');
 });
 
 Route::get('/entrada', function () {
