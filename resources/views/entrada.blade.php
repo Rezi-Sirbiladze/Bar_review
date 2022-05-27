@@ -26,6 +26,7 @@
 <!--         NAVEGACION     -->
 @include('layouts.nav')
 <!--                 BLOQUE PRINCIPAL      -->
+<h1>PRUEBA BRACH PRUEBA</h1>
     <div class="intro">
         <div class="container">
             <div class="container-title">
