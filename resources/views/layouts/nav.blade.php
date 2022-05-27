@@ -16,7 +16,13 @@
 
       <div class="dropdown">
         <a class="btn btn-primary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+          @if (Route::has('login'))
+          @auth
           {{Auth::user()->name}}
+          @else
+          Hola
+          @endauth
+          @endif
         </a>
 
         <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuLink">
