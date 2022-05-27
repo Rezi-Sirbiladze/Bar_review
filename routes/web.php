@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\EstablecimientoController;
+use App\Http\Controllers\ValoracionController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,18 +16,28 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('entrada');
 });
 
 Route::get('/entrada', function () {
     return view('entrada');
-});
+})->name('entrada');
 
 /*     prueba si funciona login  */
 
 Route::get('/entrar', function () {
     return view('login');
 });
+
+Route::get('/establecimientos', [EstablecimientoController::class, 'indexAll'])->name('establecimientos')->middleware(['auth']);
+Route::get('/establecimientos_ranking', [EstablecimientoController::class, 'indexRanking'])->name('establecimientos_ranking')->middleware(['auth']);
+
+Route::resource('/mis_establecimientos', EstablecimientoController::class)->middleware(['auth']);
+
+Route::get('/valorar/{id}', [ValoracionController::class, 'indexValorar'])->name('valorar_establecimiento')->middleware(['auth']);
+
+Route::resource('/mis_valoraciones', ValoracionController::class)->middleware(['auth']);
+
 
 /* **************************    */
 
