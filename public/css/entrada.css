@@ -127,6 +127,8 @@ h1{
 
 
 /*  VENTANA MODAL  */
+
+
 .popup{
     position:fixed;
     width: 100%;
@@ -192,6 +194,9 @@ h1{
 .popup_text{
     display:flex;
 }
+
+
+/*   **BOTONES CREAR EMPRESA CREAR USUARIO  */
 
 .account_usuario, .account_empresa{
     display:block;

@@ -41,6 +41,11 @@ Route::resource('/mis_valoraciones', ValoracionController::class)->middleware(['
 
 /* **************************    */
 
+/*  **PRUEBA LISTA RESTAURANTES   */
+Route::get('/lista_restaurantes', function () {
+    return view('lista_restaurantes');
+});
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
