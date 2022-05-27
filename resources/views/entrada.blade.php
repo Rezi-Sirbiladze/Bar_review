@@ -17,34 +17,21 @@
     rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- ********************-->
+    <!-- MDB -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.1.0/mdb.min.css" rel="stylesheet"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
 </head>
 <body>
 
 
 
 <!--         NAVEGACION     -->
-    <header class="header">
-        <div class="container">
-            <div class="header_in">
-                <nav class="nav">
-                    <a class="menu" href="#">About</a>
-                    <a class="menu" href="#">Achievements</a>
-                    <a class="menu" href="#">Contact</a>
-                    <a class="menu" href="#">Buscador</a>
-                    <a class="menu" href="#">Log in</a>
-                </nav>
-            </div>
-        </div>
-    </header>
-
+@include('layouts.nav')
 <!--                 BLOQUE PRINCIPAL      -->
     <div class="intro">
         <div class="container">
             <div class="container-title">
                 <h1 class="title">WELCOME TO BAR REVIEW</h1>
-
-                <!-- BOTON DE CREAR CUENTA  -->
-                <a class="cuenta" href="#popup">CREAR CUENTA</a>
             </div>
             <div class="slider">
                 <div href="#" class="item"><b>01</b>Intro</div>
@@ -54,50 +41,6 @@
             </div>
         </div>
     </div>
-
-
-    <!--      **VENTANA MODAL**      -->
-    <div class="popup" id="popup">
-        <div class="popup_body">
-            <div class="popup_content">
-                <a href="#" class="popup_close">X</a>
-                <div class="popup_title">TITULo POPUP</div>
-                <div class="popup_text">
-                    <div class="block_empresa">
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-                        Illo laborum sed voluptates repudiandae sapiente alias placeat. 
-                        Amet, enim assumenda? Nobis iusto molestias quae facilis aspernatur 
-                        praesentium quia reiciendis ad reprehenderit.
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                        Cumque, sit voluptatum ex possimus at quidem eligendi dolorem 
-                        reprehenderit distinctio, eos corrupti non? Aperiam quibusdam possimus 
-                        perferendis ipsum eius perspiciatis recusandae?
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                        Adipisci, explicabo. Dolores ipsam non eum officia esse expedita quibusdam 
-                        pariatur vel, voluptatem totam animi officiis molestiae! Quasi sunt 
-                        deserunt nesciunt numquam!
-                        <button class="account_empresa">Crear Empresa</button>
-                    </div>
-                    <div class="block_usuario">
-                        Lorem ipsum dolor sit, amet consectetur adipisicing 
-                        elit. Voluptates recusandae reprehenderit, aliquam distinctio inventore 
-                        iure obcaecati omnis ea cumque nemo voluptatem. Totam repudiandae officia 
-                        sed rerum, explicabo accusantium. Necessitatibus, blanditiis?
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
-                        Nesciunt et, laborum eaque distinctio nobis quasi explicabo voluptatum, 
-                        facere dicta aliquam iusto. At iusto excepturi neque tempore perferendis 
-                        ipsam quasi hic?
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                        Officiis vel officia iure delectus nobis temporibus repellat 
-                        voluptates quo quaerat ipsum vero assumenda dolores excepturi,
-                        possimus maxime neque laborum aut sit.
-                        <button class="account_usuario">Crear Usuario</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>  
-
 
     <!--      BLOQUE SOBRE NOSOTROS        -->
     <section class="about">
@@ -115,26 +58,26 @@
         </div>
 
         <div class="kitchen">
-                <div class="food">
-                    <div class="inner_food">
-                        <img class="img_food" src="./img/georgia.jpg" alt="">
-                    </div>
-                    <div class="food_info">description food</div>
+            <div class="food">
+                <div class="inner_food">
+                    <img class="img_food" src="./img/georgia.jpg" alt="">
                 </div>
+                <div class="food_info">description food</div>
+            </div>
 
-                <div class="food">
-                    <div class="inner_food">
-                        <img src="./img/spain.jpg" alt="" class="img_food">
-                    </div>
-                    <div class="food_info">description food</div>
-                    </div>
-                
-                <div class="food">
-                    <div class="inner_food">
-                        <img src="./img/ucraine.webp" alt="" class="img_food">
-                    </div>
-                    <div class="food_info">description food</div>
+            <div class="food">
+                <div class="inner_food">
+                    <img src="./img/spain.jpg" alt="" class="img_food">
                 </div>
+                <div class="food_info">description food</div>
+                </div>
+            
+            <div class="food">
+                <div class="inner_food">
+                    <img src="./img/ucraine.webp" alt="" class="img_food">
+                </div>
+                <div class="food_info">description food</div>
+            </div>
         </div>
         <div class="separation"></div>
     </section>
@@ -278,7 +221,9 @@
             </div>
         </div>
     </footer>
-
-
+    
+<!-- MDB -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.1.0/mdb.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
 </body>
 </html>

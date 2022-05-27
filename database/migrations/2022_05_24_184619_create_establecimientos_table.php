@@ -17,6 +17,10 @@ return new class extends Migration
             $table->id();
             $table->unsignedBigInteger('user_id');
             $table->string('name');
+            $table->integer('precios');
+            $table->string('sol_esp');
+            $table->string('horario');
+            $table->string('ubicacion');
             $table->timestamps();
 
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade')->onUpdate('cascade');

@@ -15,6 +15,10 @@ class Establecimiento extends Model
     protected $fillable = [
         'user_id',
         'name',
+        'precios',
+        'sol_esp',
+        'horario',
+        'ubicacion'
     ];
 
     public function user(){
