@@ -40,7 +40,14 @@ class EstablecimientoController extends Controller
 
     public function store(Request $request)
     {
-        $establecimiento = new Establecimiento(["user_id" => Auth::id(), "name" => $request["name"]]);
+        $establecimiento = new Establecimiento(
+            ["user_id" => Auth::id(),
+             "name" => $request["name"],
+             "precios" => $request["precios"],
+             "sol_esp" => $request["sol_esp"],
+             "horario" => $request["horario"],
+             "ubicacion" => $request["ubicacion"],
+            ]);
         $establecimiento->saveOrFail();
         return redirect()->route("mis_establecimientos.index")->with(["mensaje" => "Establecimiento creado",]);
     }
@@ -58,7 +65,14 @@ class EstablecimientoController extends Controller
 
     public function update(Request $request, $id)
     {
-        Establecimiento::where("id", $id)->update(["name" => $request["name"]]);
+        Establecimiento::where("id", $id)->update(
+            ["user_id" => Auth::id(),
+            "name" => $request["name"],
+            "precios" => $request["precios"],
+            "sol_esp" => $request["sol_esp"],
+            "horario" => $request["horario"],
+            "ubicacion" => $request["ubicacion"],
+        ]);
         return redirect()->route("mis_establecimientos.index")->with(["mensaje" => "Establecimiento actualizado"]);
     }
 
