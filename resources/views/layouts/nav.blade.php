@@ -1,4 +1,5 @@
-<nav class="navbar navbar-expand-md bg-light">
+
+<nav class="navbar navbar-expand-md bg-light navegacion_pagina">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">BR</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -17,7 +18,7 @@
         </li>
       </ul>
 
-      <div class="dropdown">
+    <div class="dropdown">
         <a class="btn btn-primary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
           @if (Route::has('login'))
           @auth
@@ -44,8 +45,12 @@
           @endauth
           @endif
         </ul>
+
       </div>
 
     </div>
   </div>
-</nav>
+</nav>   
+
+
+
