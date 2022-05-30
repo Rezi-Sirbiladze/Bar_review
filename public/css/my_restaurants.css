@@ -1,0 +1,54 @@
+body{
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    color:000000;
+    line-height: 1.6;
+    overflow-y: scroll;
+    background:linear-gradient(90deg, rgba(2,0,36,1) 0%,
+    rgba(195,246,81,1) 0%, rgba(0,212,255,1) 100%) ;
+}
+
+*,
+*:after,
+*:before{
+    box-sizing: border-box;
+}
+
+
+/*         **TITULO       */
+.header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 100px;
+    z-index: 100;
+}
+
+.nav{
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+.header_in{
+    display: flex;
+    height:50px;
+    justify-content: end;
+    align-items: center;
+}
+
+.menu{
+    margin: 0 20px;
+    text-decoration: none;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    transition: color .3s linear;
+}
+
+.menu:hover{
+    color: #ffff00;
+}
+
+
+

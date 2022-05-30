@@ -5,6 +5,7 @@
 @section('contenido')
 <div class="row">
     <h1>Establecimientos</h1>
+    <h2>otra prueba</h2>
     @if(session('mensaje'))
         <h5>{{session('mensaje')}}</h5>
     @endif

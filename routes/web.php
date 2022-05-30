@@ -30,7 +30,7 @@ Route::get('/entrar', function () {
 });
 
 Route::get('/establecimientos', [EstablecimientoController::class, 'indexAll'])->name('establecimientos')->middleware(['auth']);
-Route::get('/establecimientos_ranking', [EstablecimientoController::class, 'indexRanking'])->name('establecimientos_ranking')->middleware(['auth']);
+Route::get('/ranking_establecimientos', [EstablecimientoController::class, 'indexRanking'])->name('ranking_establecimientos')->middleware(['auth']);
 
 Route::resource('/mis_establecimientos', EstablecimientoController::class)->middleware(['auth']);
 

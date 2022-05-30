@@ -1,18 +1,11 @@
-@extends('layouts.layout')
-
-@section('titulo','Estableciminteos')
-
-@section('contenido')
-<div class="row">
-    <h1>Establecimientos</h1>
-    @foreach ($TopEstablecimientos as $item)
-    <div class="col mt-2">
-        <div class="card" style="width: 18rem;">
-            <img src="./img/spain.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">{{$item->id}}</h5>
-                <p class="card-text">{{$item}}</p>
-
+@foreach ($TopEstablecimientos as $item)
+    <div class="restaurant_item">
+        <div class="product">
+            <img src="./img/spain.jpg" class="image_rest" alt="...">
+                <div class="product_content">
+                    <h3 class="product_title">{{$item->name}}</h3>
+                    <p class="product_description">{{$item -> sol_esp}}</p>
+                </div>
 
                 <a class="btn btn-warning mb-2" href="{{route("mis_establecimientos.edit",[$item])}}">
                     <i class="fa fa-edit">Editar</i>
@@ -29,6 +22,4 @@
             </div>
         </div>
     </div>
-    @endforeach
-</div>
-@endsection
+@endforeach

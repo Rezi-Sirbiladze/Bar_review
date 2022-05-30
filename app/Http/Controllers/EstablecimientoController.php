@@ -18,7 +18,7 @@ class EstablecimientoController extends Controller
         ->take(10)
         ->get();
 
-        return view("top_establecimientos", compact('TopEstablecimientos'));
+        return view("ranking_restaurants", compact('TopEstablecimientos'));
     }
 
     public function indexAll()
