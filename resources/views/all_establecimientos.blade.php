@@ -1,4 +1,5 @@
-@extends('layouts.layout')
+@extends('layouts.list_restaurants')
+@section('titulo','Estableciminteos') 
 
 @section('titulo','Estableciminteos')
 
@@ -58,12 +59,13 @@
 </div> 
 <!--
     @foreach ($establecimientos as $item)
-    <div class="col mt-2">
+    <h1>PRUEBA SI ESTA PARTE FUNCIONA</h1>
+    <!--<div class="col mt-2">
         <div class="card" style="width: 18rem;">
             <img src="./img/spain.jpg" class="card-img-top" alt="...">
             <div class="card-body">
-                <h5 class="card-title">{{$item->id}} - {{$item->user->name}}</h5>
-                <p class="card-text">{{$item}}</p>
+                <h5 class="card-title">{{$item->name}}</h5>
+                <p class="card-text">{{$item -> sol_esp}}</p>
 
                 @if ($item->myValoracion() == 1)
                 <a class="btn btn-warning mb-2" href="{{route("mis_valoraciones.edit",$item->id)}}">
@@ -78,7 +80,7 @@
 
             </div>
         </div>
-    </div>
+    </div>   
     @endforeach
 -->
 @endsection

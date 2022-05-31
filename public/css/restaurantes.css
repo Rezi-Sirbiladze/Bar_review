@@ -1,0 +1,83 @@
+body{
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    color:000000;
+    line-height: 1.6;
+    overflow-y: scroll;
+    background:linear-gradient(90deg, rgba(2,0,36,1) 0%,
+    rgba(195,246,81,1) 0%, rgba(0,212,255,1) 100%) ;
+}
+
+*,
+*:after,
+*:before{
+    box-sizing: border-box;
+}
+
+
+/*        **LAYOUT BLADE      */
+
+
+.catalog{
+    padding:100px 0;
+}
+
+.header_title{
+    text-align: center;
+    margin: 40px 0 auto;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 48px;
+    color: white;
+}
+
+.catalog_filter{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.filter_wrapper{
+    list-style:none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    box-shadow: 0px 2px 20px 0px rgba(0, 0, 0, 0.3);
+    border-radius: 23px;
+    overflow: hidden;
+}
+
+.filter_btn{
+    border:0;
+    background-color: #95e1d3;
+    color: white;
+    cursor:pointer;
+    display: inline-block;
+    text-align: center;
+    padding: 15px;
+    min-width: 150px;
+    font-size: 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    border-right: 1px solid #e5e5e5;
+    transition: background, color .2s;
+}
+
+.filter_btn:hover{
+    background-color: #49bba6;
+    color: black;
+}
+
+.filter_item:last-of-type .filter_btn{
+    border-right: 0;
+}
+
+
+
+
+
+
+
+

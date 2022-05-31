@@ -22,7 +22,20 @@
 <body>
 
 <!--         NAVEGACION     -->
-@include('layouts.nav')
+<header class="header">
+        <div class="container">
+            <div class="header_in">
+                <nav class="nav">
+                    <a class="menu" href="{{ route('entrada') }}">Entrada</a>
+                    <a class="menu" href="{{ route('establecimientos_ranking') }}">Ranking establecimientos</a>
+                    <a class="menu" href="{{ route('establecimientos') }}">Todos los establecimientos</a>
+                    <a class="menu" href="#">Buscador</a>
+                    <a class="menu" href="{{ route('login') }}">Log in</a>
+                </nav>
+            </div>
+        </div>
+</header> 
+
 <!--                 BLOQUE PRINCIPAL      -->
     <div class="intro">
         <div class="container">
@@ -61,7 +74,7 @@
                         Adipisci, explicabo. Dolores ipsam non eum officia esse expedita quibusdam 
                         pariatur vel, voluptatem totam animi officiis molestiae! Quasi sunt 
                         deserunt nesciunt numquam!
-                        <button class="account_empresa">Crear Empresa</button>
+                        <button class="account_empresa"> <a class="link_empresa" href="{{ route('register') }}">Crear Empresa</a> </button>
                     </div>
                     <div class="block_usuario">
                         Lorem ipsum dolor sit, amet consectetur adipisicing 
@@ -76,7 +89,7 @@
                         Officiis vel officia iure delectus nobis temporibus repellat 
                         voluptates quo quaerat ipsum vero assumenda dolores excepturi,
                         possimus maxime neque laborum aut sit.
-                        <button class="account_usuario">Crear Usuario</button>
+                        <button class="account_usuario"><a class="link_usuario" href="{{ route('register') }}">Crear Usuario</a></button>
                     </div>
                 </div>
             </div>
