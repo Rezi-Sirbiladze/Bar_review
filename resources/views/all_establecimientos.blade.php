@@ -1,4 +1,4 @@
-@extends('layouts.list_restaurants')
+@extends('layouts.layout')
 @section('titulo','Estableciminteos') 
 
 @section('titulo','Estableciminteos')
