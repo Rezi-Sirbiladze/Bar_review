@@ -1,0 +1,16 @@
+body{
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    color:000000;
+    line-height: 1.6;
+    overflow-y: scroll;
+    background:linear-gradient(90deg, rgba(2,0,36,1) 0%,
+    rgba(195,246,81,1) 0%, rgba(0,212,255,1) 100%) ;
+}
+
+*,
+*:after,
+*:before{
+    box-sizing: border-box;
+}

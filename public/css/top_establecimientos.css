@@ -1,0 +1,54 @@
+.ranking_form_delete{
+    width: 150px;
+}
+
+.ranking_rest_footer{
+    display:flex;
+    justify-content: space-around;
+    margin-top: 50px;
+}
+
+.ranking_form_delete .btn_delete{
+    width: 150px;
+    height: 40px;
+    border: none;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 5px 30px;
+    color: white;
+    background-color:#95e1d3;
+    font-weight: bold;
+    color: white;
+    cursor:pointer;
+    font-size: 17px;
+    font-family: 'Montserrat', sans-serif;
+    border-radius: 5px;
+    transition: all .3s linear;
+}
+
+
+.btn_editar{
+    display:block;
+    width: 150px;
+    height: 40px;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding:5px 30px;
+    color: white;
+    background-color:#95e1d3;
+    font-weight: bold;
+    color: white;
+    cursor:pointer;
+    font-size: 17px;
+    font-family: 'Montserrat', sans-serif;
+    border-radius: 5px;
+    transition: all .3s linear;
+}
+
+.btn_editar:hover,  .ranking_form_delete .btn_delete:hover{
+    cursor:pointer;
+    background-color: #49bba6;
+    color: black;
+}

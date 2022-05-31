@@ -1,20 +1,63 @@
 @extends('layouts.list_restaurants')
 @section('titulo','Estableciminteos') 
 
-@section('list_restaurants')
-    
-<h1>Parte all_restaurants</h1>
-@endsection
- 
-<div class="restaurant_item">
-    <h2>prueba restaurant_item</h2>
-</div>
-<div class="row">
-    <h1>Lista de restaurantes</h1>
-    @if(session('mensaje'))
-        <h5>{{session('mensaje')}}</h5>
-    @endif
+@section('titulo','Estableciminteos')
 
+@section('contenido')
+
+<div class="catalog">
+    <div class="container">
+        <div class="part_header">
+            <h2 class="header_title">Lista restaurantes</h2>
+            <nav class="catalog_filter">
+                <ul class="filter_wrapper">
+                    <li class="filter_item">
+                    <button class="filter_btn" type="button">Todos</button>
+                    </li>
+                    <li class="filter_item">
+                    <button class="filter_btn" type="button">Valoracion</button>
+                    </li>
+                    <li class="filter_item">
+                    <button class="filter_btn" type="button">Comments</button>
+                    </li>
+                    <li class="filter_item">
+                    <button class="filter_btn" type="button">Fecha creacion</button>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+
+        <div class="restaurant_list">
+            @foreach ($establecimientos as $item)
+                <div class="restaurant_item">
+                    <div class="product">
+                        <img src="./img/spain.jpg" class="image_rest" alt="...">
+                            <div class="product_content">
+                                <h3 class="product_title">{{$item->name}}</h3>
+                                <p class="product_description">{{$item -> sol_esp}}</p>
+                            </div>
+
+                            <div class="product_footer">
+                                @if ($item->myValoracion() == 1)
+                                <a class="btn_check_valorar" href="{{route("mis_valoraciones.edit",$item->id)}}">
+                                    Ver valoración
+                                </a>
+                                @else
+                                    <a class="btn_valorar" href="{{route("valorar_establecimiento",$item->id)}}">
+                                    Valorar
+                                    </a>
+                                @endif
+                            </div>
+                    </div> 
+                </div>
+            @endforeach
+        </div>
+
+
+    </div>
+</div> 
+<!--
     @foreach ($establecimientos as $item)
     <h1>PRUEBA SI ESTA PARTE FUNCIONA</h1>
     <!--<div class="col mt-2">
@@ -39,4 +82,5 @@
         </div>
     </div>   
     @endforeach
-</div> 
+-->
+@endsection
