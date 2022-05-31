@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Bar review welcome</title>
     <link href="{{ asset('/css/entrada.css') }}" rel="stylesheet">
+    <link href="{{ asset('/css/nav.css') }}" rel="stylesheet">
 
     <!--  **FUENTES ICONOS-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,16 +18,12 @@
     rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- ********************-->
-    <!-- MDB -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.1.0/mdb.min.css" rel="stylesheet"/>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
 </head>
 <body>
 
 <!--         NAVEGACION     -->
 @include('layouts.nav')
 <!--                 BLOQUE PRINCIPAL      -->
-<p class="prueba">TEST CAMBIO 2</p>
     <div class="intro">
         <div class="container">
             <div class="container-title">
@@ -265,9 +262,5 @@
             </div>
         </div>
     </footer>
-    
-<!-- MDB -->
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.1.0/mdb.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
 </body>
 </html>

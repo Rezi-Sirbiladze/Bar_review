@@ -14,14 +14,6 @@ body{
 *:before{
     box-sizing: border-box;
 }
-
-
-
-
-
-
-
-
 h1{
     margin: 0;
 }
@@ -38,42 +30,6 @@ h1{
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
-}
-
-
-
-/*  NAVEGACION                     */
-.header{
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 100;
-}
-
-.nav{
-    font-size: 14px;
-    text-transform: uppercase;
-}
-
-.header_in{
-    display: flex;
-    height:50px;
-    justify-content: end;
-    align-items: center;
-}
-
-.menu{
-    margin: 0 20px;
-    text-decoration: none;
-    color: white;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: bold;
-    transition: color .3s linear;
-}
-
-.menu:hover{
-    color: #ffff00;
 }
 
 
