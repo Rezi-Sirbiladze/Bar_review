@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width-device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Bar review welcome</title>
     <link href="{{ asset('/css/entrada.css') }}" rel="stylesheet">
@@ -22,22 +23,10 @@
 <body>
 
 <!--         NAVEGACION     -->
-<header class="header">
-        <div class="container">
-            <div class="header_in">
-                <nav class="nav">
-                    <a class="menu" href="{{ route('entrada') }}">Entrada</a>
-                    <a class="menu" href="{{ route('establecimientos_ranking') }}">Ranking establecimientos</a>
-                    <a class="menu" href="{{ route('establecimientos') }}">Todos los establecimientos</a>
-                    <a class="menu" href="#">Buscador</a>
-                    <a class="menu" href="{{ route('login') }}">Log in</a>
-                </nav>
-            </div>
-        </div>
-</header> 
+@include('layouts.nav')
 
 <!--                 BLOQUE PRINCIPAL      -->
-    <div class="intro">
+    <div class="intro" id="intro">
         <div class="container">
             <div class="container-title">
                 <h1 class="title">WELCOME TO BAR REVIEW</h1>
@@ -210,21 +199,21 @@
                 <div class="footer_sec2">
                         <h3 class="footer_title">Blogs</h3>
                         <div class="articles">
-                            <div class="article_item1">
+                            <div class="article_item">
                                 <img src="./img/georgia.jpg" alt="">
                                 <div class="article_content">
                                     <a href="#">Lorem ipsum dolor sit amet,consectetur adipiscing</a>
                                     <div class="data">LA fecha de subida</div>
                                 </div>
                             </div>
-                            <div class="article_item2">
+                            <div class="article_item">
                                 <img src="./img/spain.jpg" alt="">
                                 <div class="article_content">
                                     <a href="#">Lorem ipsum dolor sit amet,consectetur adipiscing</a>
                                     <div class="data">LA fecha de subida</div>
                                 </div>
                             </div>
-                            <div class="article_item3">
+                            <div class="article_item">
                                 <img src="./img/ucraine.webp" alt="">
                                 <div class="article_content">
                                     <a href="#">Lorem ipsum dolor sit amet,consectetur adipiscing</a>
@@ -275,5 +264,10 @@
             </div>
         </div>
     </footer>
+
+
+    <!--      JQuery library      -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript" src="{{ asset('/js/nav.js') }}"></script>
 </body>
 </html>
