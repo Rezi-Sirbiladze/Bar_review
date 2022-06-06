@@ -38,4 +38,9 @@ class Establecimiento extends Model
         }
 
     }
+    
+    public function establecimientoPorId(){
+        $res = Establecimiento::select("*")->where([["id", "=", $this->id]])->first();
+        return $res;
+    }
 }

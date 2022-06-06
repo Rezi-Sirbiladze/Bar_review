@@ -19,9 +19,7 @@ Route::get('/', function () {
     return view('entrada');
 });
 
-Route::get('/entrada', function () {
-    return view('entrada');
-})->name('entrada');
+Route::get('/entrada', [EstablecimientoController::class, 'indexEntrada'])->name('entrada');
 
 /*     prueba si funciona login  */
 
