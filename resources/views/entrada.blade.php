@@ -105,21 +105,21 @@
                 <div class="inner_food">
                     <img class="img_food" src="./img/georgia.jpg" alt="">
                 </div>
-                <div class="food_info">description food</div>
+                <div class="food_info">{{$TopEstablecimientos[0]->establecimientoPorId()->name}}</div>
             </div>
 
             <div class="food">
                 <div class="inner_food">
                     <img src="./img/spain.jpg" alt="" class="img_food">
                 </div>
-                <div class="food_info">description food</div>
+                <div class="food_info">{{$TopEstablecimientos[1]->establecimientoPorId()->name}}</div>
                 </div>
             
             <div class="food">
                 <div class="inner_food">
                     <img src="./img/ucraine.webp" alt="" class="img_food">
                 </div>
-                <div class="food_info">description food</div>
+                <div class="food_info">{{$TopEstablecimientos[2]->establecimientoPorId()->name}}</div>
             </div>
         </div>
         <div class="separation"></div>
@@ -134,24 +134,24 @@
         <div class="achievemnts-block">
             <div class="stat">
                 <div class="stat_item">
-                    <div class="stat_count">1</div>
-                    <div class="stat_text">description</div>
+                    <div class="stat_count">{{$estatisticas["clientes"]}}</div>
+                    <div class="stat_text">Clientes</div>
                 </div>
                 <div class="stat_item">
-                    <div class="stat_count">2</div>
-                    <div class="stat_text">description</div>
+                    <div class="stat_count">{{$estatisticas["empresas"]}}</div>
+                    <div class="stat_text">Empresas</div>
                 </div>
                 <div class="stat_item">
-                    <div class="stat_count">3</div>
-                    <div class="stat_text">description</div>
+                    <div class="stat_count">{{$estatisticas["establecimientos"]}}</div>
+                    <div class="stat_text">Establecimientos</div>
                 </div>
                 <div class="stat_item">
-                    <div class="stat_count">4</div>
-                    <div class="stat_text">description</div>
+                    <div class="stat_count">{{$estatisticas["valoraciones"]}}</div>
+                    <div class="stat_text">Valoraciones</div>
                 </div>
                 <div class="stat_item">
-                    <div class="stat_count">5</div>
-                    <div class="stat_text">description</div>
+                    <div class="stat_count">{{$estatisticas["clientes"]}}</div>
+                    <div class="stat_text">Comentarios</div>
                 </div>
             </div>
         </div>

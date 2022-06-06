@@ -2,12 +2,36 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use App\Models\Establecimiento;
+use App\Models\Valoracion;
+
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
 class EstablecimientoController extends Controller
 {
+    public function indexEntrada()
+    {
+        $TopEstablecimientos = Establecimiento::query()
+        ->join('valoraciones', 'valoraciones.establecimiento_id', '=', 'establecimientos.id')
+        ->selectRaw('establecimientos.id, avg(valoraciones.nota) AS media_nota')
+        ->groupBy(['establecimientos.id'])
+        ->orderByDesc('media_nota')
+        ->take(3)
+        ->get();
+
+        $estatisticas = array (
+            "clientes" => User::where("role", "cliente")->count(),
+            "empresas" => User::where("role", "empresa")->count(),
+            "establecimientos" => Establecimiento::count(),
+            "valoraciones" => Valoracion::count(),
+        );
+
+
+        return view("entrada", compact('TopEstablecimientos', "estatisticas"));
+    }
+
     public function indexRanking()
     {
         $TopEstablecimientos = Establecimiento::query()
