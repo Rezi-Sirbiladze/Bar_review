@@ -76,9 +76,10 @@ class EstablecimientoController extends Controller
         return redirect()->route("mis_establecimientos.index")->with(["mensaje" => "Establecimiento creado",]);
     }
 
-    public function show(Establecimiento $Establecimiento)
+    public function show($id)
     {
-        //
+        $establecimiento = Establecimiento::select("*")->where("id", $id)->first();
+        return view("show_establecimiento", compact("establecimiento"));
     }
 
     public function edit($id)

@@ -28,10 +28,13 @@
 <!--                 BLOQUE PRINCIPAL      -->
     <div class="intro" id="intro">
         <div class="container">
-            <div class="container-title">
+            <div class="container-title" style="justify-content: flex-cente;">
                 <h1 class="title">WELCOME TO BAR REVIEW</h1>
-
-                <a class="cuenta" href="#popup">CREAR CUENTA</a>
+                @if (Auth::guest())
+                    <a class="cuenta" href="#popup">CREAR CUENTA</a>
+                @else
+                    <a class="cuenta" >Hola {{Auth::user()->name}}</a>
+                @endif
             </div>
             <div class="slider">
                 <div href="#" class="item"><b>01</b><span class="slider_text">Intro</span></div>
@@ -42,44 +45,14 @@
         </div>
     </div>
 
-
         <!--      **VENTANA MODAL**      -->
         <div class="popup" id="popup">
         <div class="popup_body">
             <div class="popup_content">
-                <a href="#" class="popup_close">X</a>
-                <div class="popup_title">TITULo POPUP</div>
+                <a href="#" class="popup_close"><b>X</b></a>
+                <div class="popup_title">Bienvenido</div>
                 <div class="popup_text">
-                    <div class="block_empresa">
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-                        Illo laborum sed voluptates repudiandae sapiente alias placeat. 
-                        Amet, enim assumenda? Nobis iusto molestias quae facilis aspernatur 
-                        praesentium quia reiciendis ad reprehenderit.
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                        Cumque, sit voluptatum ex possimus at quidem eligendi dolorem 
-                        reprehenderit distinctio, eos corrupti non? Aperiam quibusdam possimus 
-                        perferendis ipsum eius perspiciatis recusandae?
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                        Adipisci, explicabo. Dolores ipsam non eum officia esse expedita quibusdam 
-                        pariatur vel, voluptatem totam animi officiis molestiae! Quasi sunt 
-                        deserunt nesciunt numquam!
-                        <button class="account_empresa"> <a class="link_empresa" href="{{ route('register') }}">Crear Empresa</a> </button>
-                    </div>
-                    <div class="block_usuario">
-                        Lorem ipsum dolor sit, amet consectetur adipisicing 
-                        elit. Voluptates recusandae reprehenderit, aliquam distinctio inventore 
-                        iure obcaecati omnis ea cumque nemo voluptatem. Totam repudiandae officia 
-                        sed rerum, explicabo accusantium. Necessitatibus, blanditiis?
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
-                        Nesciunt et, laborum eaque distinctio nobis quasi explicabo voluptatum, 
-                        facere dicta aliquam iusto. At iusto excepturi neque tempore perferendis 
-                        ipsam quasi hic?
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                        Officiis vel officia iure delectus nobis temporibus repellat 
-                        voluptates quo quaerat ipsum vero assumenda dolores excepturi,
-                        possimus maxime neque laborum aut sit.
-                        <button class="account_usuario"><a class="link_usuario" href="{{ route('register') }}">Crear Usuario</a></button>
-                    </div>
+                        @include('auth.register')
                 </div>
             </div>
         </div>
@@ -102,25 +75,36 @@
 
         <div class="kitchen">
             <div class="food">
-                <div class="inner_food">
-                    <img class="img_food" src="./img/georgia.jpg" alt="">
-                </div>
-                <div class="food_info">{{$TopEstablecimientos[0]->establecimientoPorId()->name}}</div>
+                <a href="{{route("mis_establecimientos.show", [$TopEstablecimientos[0]->establecimientoPorId()->id])}}">
+                    <div class="inner_food">
+                        <img class="img_food" src="./img/georgia.jpg" alt="">
+                    </div>
+                    <div class="food_info">
+                        {{$TopEstablecimientos[0]->establecimientoPorId()->name}}
+                    </div>
+                </a>
             </div>
 
             <div class="food">
-                <div class="inner_food">
-                    <img src="./img/spain.jpg" alt="" class="img_food">
-                </div>
-                <div class="food_info">{{$TopEstablecimientos[1]->establecimientoPorId()->name}}</div>
-                </div>
+                <a href="{{route("mis_establecimientos.show", [$TopEstablecimientos[1]->establecimientoPorId()->id])}}">
+                    <div class="inner_food">
+                        <img src="./img/spain.jpg" alt="" class="img_food">
+                    </div>
+                        <div class="food_info">{{$TopEstablecimientos[1]->establecimientoPorId()->name}}
+                    </div>
+                </a>
+            </div>
             
             <div class="food">
-                <div class="inner_food">
-                    <img src="./img/ucraine.webp" alt="" class="img_food">
-                </div>
-                <div class="food_info">{{$TopEstablecimientos[2]->establecimientoPorId()->name}}</div>
+                <a href="{{route("mis_establecimientos.show", [$TopEstablecimientos[2]->establecimientoPorId()->id])}}">
+                    <div class="inner_food">
+                        <img src="./img/ucraine.webp" alt="" class="img_food">
+                    </div>
+                        <div class="food_info">{{$TopEstablecimientos[2]->establecimientoPorId()->name}}
+                    </div>
+                </a>
             </div>
+            
         </div>
         <div class="separation"></div>
     </section>

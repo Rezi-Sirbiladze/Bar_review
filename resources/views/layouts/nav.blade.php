@@ -15,9 +15,6 @@
                         <a href="" onclick="event.preventDefault(); this.closest('form').submit();" class="menu">Logout</a>
                     @else
                         <a href="{{ route('login') }}" class="menu">Log in</a>
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}" class="menu">Register</a>
-                        @endif
                     @endauth
                 @endif
             </form>
