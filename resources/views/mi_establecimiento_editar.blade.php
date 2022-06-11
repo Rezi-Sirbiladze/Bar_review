@@ -14,36 +14,51 @@
                 <input required value="{{$Establecimiento->name}}" autocomplete="off" name="name" class="form-control" type="text" placeholder="name">
             </div>
 
+            <div class="group_edit estable_description">
+                <label for="description" class="form-label">Descripcion</label>
+                <input required autocomplete="off" name="description" class="form-control" type="text">
+            </div>
+
             <div class="group_edit estable_range_price">
-                <label class="form-label" for="customRange1">Precios</label>
-                <div class="range">
-                <input type="range" class="form-range" id="precios" min="0" max="5" name="precios" value="{{$Establecimiento->precios}}" />
+                <label class="form-label" for="customRange1">Precios menu una persona</label>
+                <div class="range_slider">
+                    <input type="range" class="form-range slider" id="precios"
+                    min="1" max="50" name="precios" value="{{$Establecimiento->precios}}" />
+                    
+                    <div class="slider_thumb">
+                        <div class="tooltip"></div>
+                    </div>
+                    <div class="progress"></div>
                 </div>
             </div>
 
             <div class="group_edit estable_preferences">
                 <label class="form-label" for="customRange1">Solicitudes especiales</label>
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="sol_esp" id="flexRadioDefault1" value="Si" @if ($Establecimiento->sol_esp == 'Si') checked @endif>
-                    <label class="form-check-label" for="flexRadioDefault1">
+                    <input class="form-check-input" type="radio" name="sol_esp" id="flexRadioDefault1"
+                        value="Si" @if ($Establecimiento->sol_esp == 'Si') checked @endif>
+                    
+                        <label class="pref_label" for="flexRadioDefault1">
                         Si
                     </label>
-                    </div>
-                    <div class="form-check">
-                    <input class="form-check-input" type="radio" name="sol_esp" id="flexRadioDefault2" value="No, pero se intenta" @if ($Establecimiento->sol_esp != 'Si') checked @endif>
-                    <label class="form-check-label" for="flexRadioDefault2">
-                        No, pero se intenta
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="sol_esp" id="flexRadioDefault2" 
+                        value="No, pero se intenta" @if ($Establecimiento->sol_esp != 'Si') checked @endif>
+                    
+                        <label class="pref_label" for="flexRadioDefault2">
+                        No
                     </label>
                 </div>
             </div>
 
             <div class="group_edit estable_workhours">
                 <label for="horario" class="form-label">Horario</label>
-                <textarea class="form-control" id="horario" name="horario" rows="3" value="{{$Establecimiento->horario}}" >{{$Establecimiento->horario}}</textarea>
+                <input class="form-control" type="text" id="horario" name="horario"  value="{{$Establecimiento->horario}}" >
             </div>
 
             <div class="group_edit estable_location">
-                <label for="ubicacion" class="form-label">Ubicación de establecimiento</label>
+                <label for="ubicacion" class="form-label">Ubicación</label>
                 <input type="text" class="form-control" id="ubicacion" name="ubicacion" value="{{$Establecimiento->ubicacion}}" >
             </div>
 

@@ -10,7 +10,8 @@
     <link rel="stylesheet" href="{{ asset('/css/nav.css') }}">
     <link rel="stylesheet" href="{{ asset('/css/all_establecimientos.css') }}">
     <link rel="stylesheet" href="{{ asset('/css/top_establecimientos.css') }}">
-    <link rel="stylesheet" href="{{ asset('/css/mi_establecimiento.css') }}">
+    <link rel="stylesheet" href="{{ asset('/css/mis_establecimientos.css') }}">
+    <link rel="stylesheet" href="{{ asset('/css/mi_establecimiento_edit.css') }}">
     <!--     ****************   -->
 
         <!--  **FUENTES ICONOS-->
@@ -28,5 +29,8 @@
     <div class="container">
         @yield('contenido')
     </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript" src="{{ asset('/js/nav.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('/js/slider.js') }}"></script>
   </body>
 </html>
