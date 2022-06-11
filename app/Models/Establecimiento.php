@@ -29,6 +29,12 @@ class Establecimiento extends Model
         return $this->hasMany(Valoracion::class);
     }
 
+    public function valoracionesAVG(){
+        $res = Valoracion::selectRaw("AVG(nota) AS media_nota")->where("establecimiento_id", "=", $this->id)->groupBy(['establecimiento_id'])->get();
+        return $res;
+    }
+
+
     public function myValoracion(){
         $res = Valoracion::select("*")->where([["establecimiento_id", "=", $this->id], ["user_id", "=", Auth::id()]])->first();
         if($res){

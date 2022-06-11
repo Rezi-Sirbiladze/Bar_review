@@ -35,7 +35,13 @@
                         <img src="./img/spain.jpg" class="image_rest" alt="...">
                             <div class="product_content">
                                 <h3 class="product_title">{{$item->name}}</h3>
-                                <p class="product_description">{{$item -> sol_esp}}</p>
+                                <div style="padding-left: 10%">
+                                    <p><b>Creado</b> {{$item->created_at}}</p>
+                                    <p><b>Ubicación</b> {{$item->ubicacion}}</p>
+                                        @if ( null !== $item->valoracionesAVG() )
+                                        <p><b>Valoración</b> {{$item->valoracionesAVG()[0]->media_nota}}</p>
+                                        @endif
+                                    </div>
                             </div>
 
                             <div class="product_footer">

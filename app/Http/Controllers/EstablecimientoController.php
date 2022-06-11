@@ -78,8 +78,8 @@ class EstablecimientoController extends Controller
 
     public function show($id)
     {
-        $establecimiento = Establecimiento::select("*")->where("id", $id)->first();
-        return view("show_establecimiento", compact("establecimiento"));
+        $Establecimiento = Establecimiento::select("*")->where("id", $id)->first();
+        return view("show_establecimiento", compact("Establecimiento"));
     }
 
     public function edit($id)

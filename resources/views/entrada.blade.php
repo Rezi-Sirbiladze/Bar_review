@@ -74,39 +74,45 @@
         </div>
 
         <div class="kitchen">
-            <div class="food">
-                <a href="{{route("mis_establecimientos.show", [$TopEstablecimientos[0]->establecimientoPorId()->id])}}">
-                    <div class="inner_food">
-                        <img class="img_food" src="./img/georgia.jpg" alt="">
-                    </div>
-                    <div class="food_info">
-                        {{$TopEstablecimientos[0]->establecimientoPorId()->name}}
-                    </div>
-                </a>
-            </div>
+            @if(isset($TopEstablecimientos[0]))
+                <div class="food">
+                    <a href="{{route("mis_establecimientos.show", [$TopEstablecimientos[0]->establecimientoPorId()->id])}}">
+                        <div class="inner_food">
+                            <img class="img_food" src="./img/georgia.jpg" alt="">
+                        </div>
+                        <div class="food_info">
+                            {{$TopEstablecimientos[0]->establecimientoPorId()->name}}
+                        </div>
+                    </a>
+                </div>
+            @endif
+                
+            @if(isset($TopEstablecimientos[1]))
+                <div class="food">
+                    <a href="{{route("mis_establecimientos.show", [$TopEstablecimientos[1]->establecimientoPorId()->id])}}">
+                        <div class="inner_food">
+                            <img src="./img/spain.jpg" alt="" class="img_food">
+                        </div>
+                            <div class="food_info">{{$TopEstablecimientos[1]->establecimientoPorId()->name}}
+                        </div>
+                    </a>
+                </div>
+            @endif
 
-            <div class="food">
-                <a href="{{route("mis_establecimientos.show", [$TopEstablecimientos[1]->establecimientoPorId()->id])}}">
-                    <div class="inner_food">
-                        <img src="./img/spain.jpg" alt="" class="img_food">
-                    </div>
-                        <div class="food_info">{{$TopEstablecimientos[1]->establecimientoPorId()->name}}
-                    </div>
-                </a>
-            </div>
-            
-            <div class="food">
-                <a href="{{route("mis_establecimientos.show", [$TopEstablecimientos[2]->establecimientoPorId()->id])}}">
-                    <div class="inner_food">
-                        <img src="./img/ucraine.webp" alt="" class="img_food">
-                    </div>
-                        <div class="food_info">{{$TopEstablecimientos[2]->establecimientoPorId()->name}}
-                    </div>
-                </a>
-            </div>
-            
+            @if(isset($TopEstablecimientos[2]))
+                <div class="food">
+                    <a href="{{route("mis_establecimientos.show", [$TopEstablecimientos[2]->establecimientoPorId()->id])}}">
+                        <div class="inner_food">
+                            <img src="./img/ucraine.webp" alt="" class="img_food">
+                        </div>
+                            <div class="food_info">{{$TopEstablecimientos[2]->establecimientoPorId()->name}}
+                        </div>
+                    </a>
+                </div>
+            @endif
         </div>
         <div class="separation"></div>
+
     </section>
 
 
