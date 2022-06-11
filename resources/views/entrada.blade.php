@@ -34,10 +34,10 @@
                 <a class="cuenta" href="#popup">CREAR CUENTA</a>
             </div>
             <div class="slider">
-                <div href="#" class="item"><b>01</b>Intro</div>
-                <div href="#" class="item"><b>02</b>About</div>
-                <div href="#" class="item"><b>03</b>Achievements</div>
-                <div href="#" class="item"><b>04</b>Contact</div>
+                <div href="#" class="item"><b>01</b><span class="slider_text">Intro</span></div>
+                <div href="#" class="item"><b>02</b><span class="slider_text">About</span></div>
+                <div href="#" class="item"><b>03</b><span class="slider_text">Achievements</span></div>
+                <div href="#" class="item"><b>04</b><span class="slider_text">Contact</span></div>
             </div>
         </div>
     </div>

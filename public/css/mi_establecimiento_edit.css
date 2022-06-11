@@ -1,0 +1,320 @@
+
+/*              **FORMULARIO     */
+.header_establecimientos{
+    text-align: center;
+    margin: 100px 0 auto;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 48px;
+    color: white;
+}
+
+
+.edit_establecimiento{
+    width: 800px;
+    margin: 50px auto 0;
+    border-radius: 40px 40px 40px 40px;
+    border: 2px solid #EFF0EF;
+    padding: 20px;
+}
+
+.group_edit{
+    margin: 40px 40px 60px 40px;
+}
+
+.group_edit label{
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    font-size: 25px;
+    font-weight:bold;
+    text-transform: uppercase;
+}
+
+.estable_nombre input{
+    display: block;
+    border: 2px solid white;
+    padding: 15px 20px;
+    border-radius: 10px;
+    width: 450px;
+    color: white;
+    font-size: 17px;
+    background-color: transparent;
+}
+
+.estable_nombre input:focus{
+    outline:none;
+}
+
+.estable_description label{
+    display:block;
+    margin-bottom: 10px;
+}
+
+.estable_description input{
+    display: block;
+    border: 2px solid white;
+    padding: 15px 20px;
+    border-radius: 10px;
+    width: 450px;
+    color: white;
+    font-size: 17px;
+    background-color: transparent;
+}
+
+.estable_description input:focus{
+    outline:none;
+}
+
+.estable_nombre label{
+    display: block;
+    margin-bottom: 10px;
+}
+
+.group_button_edit{
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.form-check{
+    position: relative;
+    margin: 10px 0;
+}
+
+.form-check-input{
+    -webkit-appearance: none;
+    appearance: none;
+    position: absolute;
+
+}
+
+.estable_preferences{
+    margin: 60px 40px 60px 40px;
+}
+
+
+.estable_preferences .pref_label {
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    padding-left: 25px;
+    cursor:pointer;
+}
+
+.estable_preferences .pref_label::before{
+    content:"";
+    display: block;
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    position: absolute;
+    top:0;
+    left: 0;
+    z-index: 1;
+
+}
+
+.estable_preferences .pref_label::after{
+    content: "";
+    display:block;
+    width: 16px;
+    height: 16px;
+
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    background: linear-gradient(45deg, rgba(2,0,36,1) 0%, 
+    rgba(238,215,137,1) 0%, rgba(232,142,131,1) 100%);
+    position:absolute;
+    top: 2px;
+    left: 2px;
+    opacity:0;
+    z-index: 2;
+    transition: opacity .1s linear;
+}
+
+.form-check-input:checked + .pref_label::after{
+    opacity: 1;
+}
+
+.estable_workhours label{
+    display:block;
+    margin-bottom:10px;
+}
+
+.estable_workhours input{
+    display: block;
+    border: 2px solid white;
+    padding: 15px 20px;
+    border-radius: 10px;
+    width: 450px;
+    color: white;
+    font-size: 17px;
+    background-color: transparent;
+}
+
+.estable_workhours input:focus{
+    outline:none;
+}
+
+.estable_location label{
+    display:block;
+    margin-bottom:10px;
+}
+
+.estable_location input{
+    display: block;
+    border: 2px solid white;
+    padding: 15px 20px;
+    border-radius: 10px;
+    width: 450px;
+    color: white;
+    font-size: 17px;
+    background-color: transparent;
+}
+
+.estable_location input:focus{
+    outline:none;
+}
+
+
+/*      **  RANGO PRECIOS     **  */
+
+.range_slider{
+    max-width: 350px;
+    margin: 50px 0 0;
+    position: relative;
+    display: flex;
+}
+
+
+.range_slider .slider{
+    -webkit-appearance: none;
+    width: 100%;
+    height: 7px;
+    outline: none;
+    border-radius: 3px;
+    background: black;
+    box-shadow: 3px 3px 6px #000,
+    inset 1px 1px 1px rgba(232,142,131,1)
+}
+
+/*  slider cursor      */
+.range_slider .slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 10px;
+    height: 10px;
+    z-index: 10;
+    position:relative;
+    cursor: pointer;
+}
+
+.range_slider .slider_thumb{
+    position:absolute;
+    width: 25px;
+    height: 25px;
+    background: white;
+    border-radius: 50%;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    z-index:2;
+    box-shadow: inset 0px 1px 2px #909090;
+}
+
+.range_slider .slider_thumb::before{
+    content: "";
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    width: 15px;
+    height: 15px;
+    background: white;
+    border-radius: inherit;
+    transition: .3s linear;
+
+}
+
+.range_slider:hover .slider_thumb::before{
+    background:linear-gradient(45deg, rgba(2,0,36,1) 0%, 
+    rgba(238,215,137,1) 0%, rgba(232,142,131,1) 100%);
+}
+
+.slider_thumb .tooltip{
+    position:absolute;
+    width: 30px;
+    height: 30px;
+    top: -30px;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background:linear-gradient(45deg, rgba(2,0,36,1) 0%, 
+    rgba(238,215,137,1) 0%, rgba(232,142,131,1) 100%);
+    text-align: center;
+    line-height: 25px;
+    font-weight: bold;
+    color: white;
+    border-radius: 5px;
+    box-shadow:0px 3px 10px #1f1f1f,
+    inset 0px 1px 2px #909090;
+}
+
+.slider_thumb .tooltip::before{
+    content: "";
+    position:absolute;
+    width: 0;
+    height: 0;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 10px solid rgba(232,142,131,1);
+    bottom: -10px;
+    left: 50%;
+    transform: translate(-50%);
+
+}
+
+.range_slider .progress {
+    width: 50%;
+    height: 10px;
+    border-radius: 3px;
+    background: linear-gradient(45deg, rgba(2,0,36,1) 0%, 
+    rgba(238,215,137,1) 0%, rgba(232,142,131,1) 100%);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    pointer-events:none;
+}
+
+
+/*             **RANGO PRECIOS**       
+
+
+
+/*      **BOTONES GUARDAR VOLVER    */
+.btn_save, .btn_back{
+    text-decoration: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    width: 180px;
+    text-align: center;
+    border-radius: 5px;
+    background-color: #95e1d3;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: white;
+    border: none;
+    transition: all .3s linear;
+}
+
+.btn_save:hover, .btn_back:hover{
+    cursor:pointer;
+    background-color: #49bba6;
+    color: black;
+}
+
+
+/*      **BOTONES GUARDAR VOLVER    */
