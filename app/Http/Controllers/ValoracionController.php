@@ -47,7 +47,8 @@ class ValoracionController extends Controller
     public function edit($id)
     {
         $valoracion = Valoracion::select("*")->where([["establecimiento_id", "=", $id], ["user_id", "=", Auth::id()]])->first();
-        return view("mi_valoracion_editar", compact("valoracion"));
+        $Establecimiento = Establecimiento::select("*")->where([["id", "=", $valoracion->establecimiento_id]])->first();
+        return view("mi_valoracion_editar", compact("valoracion", "Establecimiento"));
     }
 
     public function update(Request $request, $id)

@@ -1,38 +1,13 @@
 @extends('layouts.layout')
+@section('titulo','Estableciminteos') 
 
-@section('titulo','Valorar establecimiento')
+@section('titulo','Estableciminteos')
 
 @section('contenido')
 <div class="container">
-    <h1 class="header_establecimientos">Valorar establecimiento</h1>
+    <h1 class="header_establecimientos">Establecimiento</h1>
     <div class="content_establecimiento">
-        <div class="edit_establecimiento" >
-
-            <div class="group_edit">
-                <form method="post" action="{{ route('mis_valoraciones.store') }}"> 
-                    @csrf
-                        <div class="col-auto">
-                            <label class="form-label" for="customRange1">Nota</label>
-                            <div class="range">
-                            <input type="range" class="form-range" id="nota" name="nota" />
-                        </div>
-                            <div class="mb-3">
-                                <label for="puntos_pos" class="form-label">Puntos positivos</label>
-                                <textarea class="form-control" id="puntos_pos" name="puntos_pos" rows="3"></textarea>
-                            </div>
-                            <div class="mb-3">
-                                <label for="puntos_neg" class="form-label">Puntos positivos</label>
-                                <textarea class="form-control" id="puntos_neg" name="puntos_neg" rows="3"></textarea>
-                            </div>
-                            <div class="col-auto">
-                            <input type="hidden" name="establecimiento_id" value="{{$Establecimiento->id}}">
-                            <button type="submit" class="btn_editar">Confirm</button>
-                        </div>
-                </form>
-            </div>
-
-            <hr style="height: 5px;  background-color: white; border-color: white; margin-top: 10%">
-
+        <form class="edit_establecimiento" method="POST" action="">
             <div class="group_edit estable_nombre">
                 <label for="name" class="form-label">Nombre de establecimiento </label>
                 <p>{{$Establecimiento->name}}</p>
@@ -77,8 +52,7 @@
             </div>
             
 
-        </div>
+        </form>
     </div>
 </div>
-
 @endsection
