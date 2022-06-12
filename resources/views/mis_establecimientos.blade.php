@@ -19,6 +19,51 @@
                 </ul>
             </nav>
         </div>
+        <form method="post" action="{{ route('mis_establecimientos.store') }}"> 
+            @csrf
+            <div class="mb-3">
+                <label for="name" class="form-label">Nombre de establecimiento</label>
+                <input type="text" class="form-control" id="name" name="name" value="{{old('name')}}">
+            </div>
+            <div class="mb-3">
+                <label for="descripcion" class="form-label">Descripción de establecimiento</label>
+                <input type="text" class="form-control" id="descripcion" name="descripcion" value="{{old('descripcion')}}">
+            </div>
+            <div class="col-auto">
+                <label class="form-label" for="customRange1">Precios</label>
+                <div class="range">
+                <input type="range" class="form-range" id="precios" min="0" max="50" name="precios"/>
+                </div>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="customRange1">Solicitudes especiales</label>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="sol_esp" id="flexRadioDefault1" value="Si">
+                    <label class="form-check-label" for="flexRadioDefault1">
+                        Si
+                    </label>
+                    </div>
+                    <div class="form-check">
+                    <input class="form-check-input" type="radio" name="sol_esp" id="flexRadioDefault2" value="No, pero se intenta" checked>
+                    <label class="form-check-label" for="flexRadioDefault2">
+                        No, pero se intenta
+                    </label>
+                </div>
+            </div>
+            <div class="mb-3">
+                <label for="horario" class="form-label">Horario</label>
+                <textarea class="form-control" id="horario" name="horario" rows="3"></textarea>
+            </div>
+            <div class="mb-3">
+                <label for="ubicacion" class="form-label">Ubicación de establecimiento</label>
+                <input type="text" class="form-control" id="ubicacion" name="ubicacion">
+            </div>
+            <button type="submit" class="btn btn-primary">Crear</button>
+        </form>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+
 
 
         <div class="restaurant_list">
@@ -31,7 +76,7 @@
                             <p class="product_description">
                                 <b>Creado</b> {{$item->created_at}} 
                                 <b>Ubicación</b> {{$item->ubicacion}}
-                                @if ( null !== $item->valoracionesAVG() )
+                                @if ( isset($item->valoracionesAVG()[0]) )
                                 <b>Valoración</b> {{$item->valoracionesAVG()[0]->media_nota}}
                                 @endif
 
@@ -53,7 +98,4 @@
         </div>
     </div>
 </div>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-<!-- JavaScript Bundle with Popper -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
 @endsection

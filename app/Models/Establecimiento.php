@@ -15,6 +15,7 @@ class Establecimiento extends Model
     protected $fillable = [
         'user_id',
         'name',
+        'descripcion',
         'precios',
         'sol_esp',
         'horario',

@@ -15,8 +15,8 @@
             </div>
 
             <div class="group_edit estable_description">
-                <label for="description" class="form-label">Descripcion</label>
-                <input required autocomplete="off" name="description" class="form-control" type="text">
+                <label for="descripcion" class="form-label">Descripcion</label>
+                <input required autocomplete="off" name="descripcion" class="form-control" type="text" value="{{$Establecimiento->descripcion}}">
             </div>
 
             <div class="group_edit estable_range_price">

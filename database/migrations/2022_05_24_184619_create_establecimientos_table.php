@@ -17,6 +17,7 @@ return new class extends Migration
             $table->id();
             $table->unsignedBigInteger('user_id');
             $table->string('name');
+            $table->string('descripcion');
             $table->integer('precios');
             $table->string('sol_esp');
             $table->string('horario');

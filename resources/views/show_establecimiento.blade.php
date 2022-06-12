@@ -7,7 +7,7 @@
 <div class="container">
     <h1 class="header_establecimientos">Establecimiento</h1>
     <div class="content_establecimiento">
-        <form class="edit_establecimiento" method="POST" action="">
+        <div class="edit_establecimiento">
             <div class="group_edit estable_nombre">
                 <label for="name" class="form-label">Nombre de establecimiento </label>
                 <p>{{$Establecimiento->name}}</p>
@@ -15,7 +15,7 @@
 
             <div class="group_edit estable_description">
                 <label for="description" class="form-label">Descripcion</label>
-                <input required autocomplete="off" name="description" class="form-control" type="text">
+                <p>{{$Establecimiento->descripcion}}</p>
             </div>
 
             <div class="group_edit estable_range_price">
@@ -48,11 +48,32 @@
 
             <div class="group_edit">
                 <label for="valoracion" class="form-label">Media de valoración </label>
-                <p>{{$Establecimiento->valoracionesAVG()[0]->media_nota}}</p>
+                @if (isset($Establecimiento->valoracionesAVG()[0]))
+                    <p>{{$Establecimiento->valoracionesAVG()[0]->media_nota}}</p>
+                @else
+                    <p>Sin notas</p>
+                @endif
+
             </div>
             
+            @if (isset($Establecimiento->valoraciones))
+            <hr>
+            <div class="group_edit">
+                <label for="valoracion" class="form-label">Valoraciónes</label>
+                @foreach ($Establecimiento->valoraciones as $item)
+                <div style="border: 1px solid white; border-radius: 10%; padding: 3%;">
+                    {{$item->ise}}
+                    <p><b>Usuario:</b> {{$item->user->name}}</p>
+                    <p><b>Nota:</b> {{$item->nota}}</p>
+                    <p><b>Puntos positivos:</b> {{$item->puntos_pos}}</p>
+                    <p><b>Puntos negativos:</b> {{$item->puntos_neg}}</p>
+                </div>
+                    <br>
+                @endforeach
+            </div>
+            @endif
 
-        </form>
+        </div>
     </div>
 </div>
 @endsection
