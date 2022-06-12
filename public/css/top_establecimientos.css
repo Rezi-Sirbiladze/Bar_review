@@ -1,41 +1,28 @@
-.ranking_form_delete{
-    width: 150px;
-}
-
 .ranking_rest_footer{
-    display:flex;
-    justify-content: space-around;
+    display:grid;
+    grid-template-columns: 1fr;
+    row-gap: 10px;
     margin-top: 50px;
 }
 
-.ranking_form_delete .btn_delete{
+.btn_editar{
+    display:block;
+}
+
+.ranking_form_delete{
+    width: 150px;
+    margin:auto;
+}
+
+.ranking_form_delete .btn_delete, .btn_editar{
     width: 150px;
     height: 40px;
+    margin:auto;
     border: none;
     text-align: center;
     text-transform: uppercase;
     text-decoration: none;
     padding: 5px 30px;
-    color: white;
-    background-color:#95e1d3;
-    font-weight: bold;
-    color: white;
-    cursor:pointer;
-    font-size: 17px;
-    font-family: 'Montserrat', sans-serif;
-    border-radius: 5px;
-    transition: all .3s linear;
-}
-
-
-.btn_editar{
-    display:block;
-    width: 150px;
-    height: 40px;
-    text-align: center;
-    text-transform: uppercase;
-    text-decoration: none;
-    padding:5px 30px;
     color: white;
     background-color:#95e1d3;
     font-weight: bold;

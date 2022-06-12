@@ -250,7 +250,7 @@
             </div>
 
             <div class="copyright">
-                C Bar Review all rights belongs to Ivan and Rezi <span>2022</span>
+                © Bar Review by Ivan and Rezi 2022
             </div>
         </div>
     </footer>
