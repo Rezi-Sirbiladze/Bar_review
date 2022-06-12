@@ -37,7 +37,6 @@
                 <div class="form-check">
                     <input class="form-check-input" type="radio" name="sol_esp" id="flexRadioDefault1"
                         value="Si" @if ($Establecimiento->sol_esp == 'Si') checked @endif>
-                    
                         <label class="pref_label" for="flexRadioDefault1">
                         Si
                     </label>
@@ -45,7 +44,6 @@
                 <div class="form-check">
                     <input class="form-check-input" type="radio" name="sol_esp" id="flexRadioDefault2" 
                         value="No, pero se intenta" @if ($Establecimiento->sol_esp != 'Si') checked @endif>
-                    
                         <label class="pref_label" for="flexRadioDefault2">
                         No
                     </label>
