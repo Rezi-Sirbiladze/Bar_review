@@ -53,13 +53,23 @@ class ValoracionController extends Controller
 
     public function update(Request $request, $id)
     {
-        Valoracion::where("id", $id)->update(["nota" => $request["nota"], "puntos_pos" => $request["puntos_pos"], "puntos_neg" => $request["puntos_neg"]]);
-        return redirect()->route("establecimientos")->with(["mensaje" => "Valoracion actualizada"]);
+        $valoracion = Valoracion::select("*")->where("id", $id)->first();
+        if($valoracion->user_id == Auth::id()){
+            Valoracion::where("id", $id)->update(["nota" => $request["nota"], "puntos_pos" => $request["puntos_pos"], "puntos_neg" => $request["puntos_neg"]]);
+            return redirect()->route("establecimientos")->with(["mensaje" => "Valoracion actualizada"]);
+        } else {
+            return redirect('/');
+        }
     }
 
     public function destroy($id)
     {
-        Valoracion::where([["id", "=", $id], ["user_id", "=", Auth::id()]])->delete();
-        return redirect()->route("establecimientos")->with(["mensaje" => "Valoracion eliminada"]);
+        $valoracion = Valoracion::select("*")->where("id", $id)->first();
+        if($valoracion->user_id == Auth::id()){
+            Valoracion::where([["id", "=", $id], ["user_id", "=", Auth::id()]])->delete();
+            return redirect()->route("establecimientos")->with(["mensaje" => "Valoracion eliminada"]);
+        } else {
+            return redirect('/');
+        }
     }
 }

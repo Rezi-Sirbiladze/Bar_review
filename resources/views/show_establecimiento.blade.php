@@ -48,10 +48,30 @@
 
             <div class="group_edit">
                 <label for="valoracion" class="form-label">Media de valoración </label>
-                <p>{{$Establecimiento->valoracionesAVG()[0]->media_nota}}</p>
+                @if (isset($Establecimiento->valoracionesAVG()[0]))
+                    <p>{{$Establecimiento->valoracionesAVG()[0]->media_nota}}</p>
+                @else
+                    <p>Sin notas</p>
+                @endif
+
             </div>
             
-
+            @if (isset($Establecimiento->valoraciones))
+            <hr>
+            <div class="group_edit">
+                <label for="valoracion" class="form-label">Valoraciónes</label>
+                @foreach ($Establecimiento->valoraciones as $item)
+                <div style="border: 1px solid white; border-radius: 10%; padding: 3%;">
+                    {{$item->ise}}
+                    <p><b>Usuario:</b> {{$item->user->name}}</p>
+                    <p><b>Nota:</b> {{$item->nota}}</p>
+                    <p><b>Puntos positivos:</b> {{$item->puntos_pos}}</p>
+                    <p><b>Puntos negativos:</b> {{$item->puntos_neg}}</p>
+                </div>
+                    <br>
+                @endforeach
+            </div>
+            @endif
 
         </div>
     </div>

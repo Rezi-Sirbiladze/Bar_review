@@ -32,7 +32,7 @@
             <div class="col-auto">
                 <label class="form-label" for="customRange1">Precios</label>
                 <div class="range">
-                <input type="range" class="form-range" id="precios" min="0" max="5" name="precios"/>
+                <input type="range" class="form-range" id="precios" min="0" max="50" name="precios"/>
                 </div>
             </div>
             <div class="mb-3">

@@ -16,10 +16,10 @@
                             <div class="product_content">
                                 <div style="padding-left: 10%">
                                 <p><b>Nombre</b> {{$item->establecimientoPorId()->name}}</p>
-                                <p><b>Creado</b> {{$item->establecimientoPorId()->created_at}}</p>
+                                <p><b>Creado</b> {{substr($item->establecimientoPorId()->created_at, 0, 10)}}</p>
                                 <p><b>Ubicación</b> {{$item->establecimientoPorId()->ubicacion}}</p>
                                     @if ( null !== $item->valoracionesAVG() )
-                                    <p><b>Valoración</b> {{$item->valoracionesAVG()[0]->media_nota}}</p>
+                                    <p><b>Valoración</b> {{substr($item->valoracionesAVG()[0]->media_nota, 0, 3)}}</p>
                                     @endif
                                 </div>
                             </div>
@@ -48,13 +48,9 @@
                 'orden': clicked_id
             }
         }).done(function( data, textStatus, jqXHR ) {
-            console.log(data);
             var appendString = "";
-
-
-
+            $('#resultado_busqueda').empty().append(appendString);
             data.forEach(element => {
-                console.log(element);
                 var url = '{{ route("mis_establecimientos.show", ":id") }}';
                 url = url.replace(':id', element.id);
                 appendString +=`
@@ -64,10 +60,10 @@
                             <div class="product_content">
                                 <div style="padding-left: 10%">
                                 <p><b>Nombre</b> ${element.name}</p>
-                                <p><b>Creado</b> ${element.created_at}</p>
+                                <p><b>Creado</b> ${element.created_at.substring(0,10)}</p>
                                 <p><b>Ubicación</b> ${element.ubicacion}</p>
                                     @if ( null !== $item->valoracionesAVG() )
-                                    <p><b>Valoración</b> ${element.media_nota}</p>
+                                    <p><b>Valoración</b> ${element.media_nota.substring(0,3)}</p>
                                     @endif
                                 </div>
                             </div>

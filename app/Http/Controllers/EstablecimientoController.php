@@ -86,26 +86,40 @@ class EstablecimientoController extends Controller
     public function edit($id)
     {
         $Establecimiento = Establecimiento::select("*")->where("id", $id)->first();
-        return view("mi_establecimiento_editar", compact("Establecimiento"));
+        if($Establecimiento->user_id == Auth::id()){
+            return view("mi_establecimiento_editar", compact("Establecimiento"));
+        } else {
+            return redirect('/');
+        }
     }
 
     public function update(Request $request, $id)
     {
-        Establecimiento::where("id", $id)->update(
-            ["user_id" => Auth::id(),
-            "name" => $request["name"],
-            "descripcion" => $request["descripcion"],
-            "precios" => $request["precios"],
-            "sol_esp" => $request["sol_esp"],
-            "horario" => $request["horario"],
-            "ubicacion" => $request["ubicacion"],
-        ]);
-        return redirect()->route("mis_establecimientos.index")->with(["mensaje" => "Establecimiento actualizado"]);
+        $Establecimiento = Establecimiento::select("*")->where("id", $id)->first();
+        if($Establecimiento->user_id == Auth::id()){
+            Establecimiento::where("id", $id)->update(
+                ["user_id" => Auth::id(),
+                "name" => $request["name"],
+                "descripcion" => $request["descripcion"],
+                "precios" => $request["precios"],
+                "sol_esp" => $request["sol_esp"],
+                "horario" => $request["horario"],
+                "ubicacion" => $request["ubicacion"],
+            ]);
+            return redirect()->route("mis_establecimientos.index")->with(["mensaje" => "Establecimiento actualizado"]);
+        } else {
+            return redirect('/');
+        }
     }
 
     public function destroy($id)
     {
-        Establecimiento::where("id", $id)->delete();
-        return redirect()->route("mis_establecimientos.index")->with(["mensaje" => "Establecimiento eliminado"]);
+        $Establecimiento = Establecimiento::select("*")->where("id", $id)->first();
+        if($Establecimiento->user_id == Auth::id()){
+            Establecimiento::where("id", $id)->delete();
+            return redirect()->route("mis_establecimientos.index")->with(["mensaje" => "Establecimiento eliminado"]);
+        } else {
+            return redirect('/');
+        }
     }
 }
