@@ -3,38 +3,46 @@
 @section('titulo','Editar Establecimientos')
 
 @section('contenido')
-<div class="row">
-    <h1>Editar Establecimiento</h1>
-        <form method="post" action="{{route("mis_valoraciones.update", [$valoracion->id])}}"> 
+<div class="container">
+    <div class="content_establecimiento">
+        <h1 class="header_title">Editar Establecimiento</h1>
+        <form method="post" class="edit_establecimiento" action="{{route("mis_valoraciones.update", [$valoracion->id])}}"> 
             @method("PUT")
             @csrf
-            <div class="col-auto">
+            <div class="group_edit estable_range_price">
                 <label class="form-label" for="customRange1">Nota</label>
-                <div class="range">
-                <input type="range" class="form-range" id="nota" name="nota"  value="{{$valoracion->nota}}"/>
+                <div class="range_slider">
+                    <input type="range" class="form-range slider" id="precios"
+                    min="0" max="10" name="nota" value="{{$valoracion->nota}}" />
+                    
+                    <div class="slider_thumb">
+                        <div class="tooltip"></div>
+                    </div>
+                    <div class="progress"></div>
+                </div>
             </div>
-            <div class="mb-3">
-                <label for="puntos_pos" class="form-label">Puntos positivos</label>
-                <textarea class="form-control" id="puntos_pos" name="puntos_pos" rows="3" value="{{$valoracion->puntos_pos}}">{{$valoracion->puntos_pos}}</textarea>
+
+            <div class="group_edit estable_nombre">
+                <label for="name" class="form-label">Puntos positivos</label>
+                <input required autocomplete="off" name="puntos_pos" class="form-control" value="{{$valoracion->puntos_pos}}" type="text" placeholder="{{$valoracion->puntos_pos}}">
             </div>
-            <div class="mb-3">
-                <label for="puntos_neg" class="form-label">Puntos positivos</label>
-                <textarea class="form-control" id="puntos_neg" name="puntos_neg" rows="3" value="{{$valoracion->puntos_neg}}">{{$valoracion->puntos_neg}}</textarea>
+
+            <div class="group_edit estable_nombre">
+                <label for="name" class="form-label">Puntos negativos</label>
+                <input required autocomplete="off" name="puntos_neg" class="form-control" value="{{$valoracion->puntos_neg}}" type="text" placeholder="{{$valoracion->puntos_neg}}">
             </div>
-            <div class="col-auto">
+
+            <div class="group_edit group_button_edit">
                 <input type="hidden" name="valoracion_id" value="{{$valoracion->id}}">
-                <button class="btn btn-success">Guardar</button>
-                <a class="btn btn-primary" href="{{route("establecimientos")}}">Volver</a>
+                <button class="btn_save">Guardar</button>
+                <a class="btn_back" href="{{route("establecimientos")}}">Volver</a>
 
                 <form action="{{route("mis_valoraciones.destroy", [$valoracion->id])}}" method="post">
                     @method("delete")
                     @csrf
-                    <button type="submit" class="btn btn-danger">
-                        <i class="fa fa-trash">Eliminar</i>
-                    </button>
+                    <button type="submit" class="btn btn_save">Eliminar</button>
                 </form>
             </div>
-
 
         </form>
     </div>

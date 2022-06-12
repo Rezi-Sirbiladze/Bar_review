@@ -8,6 +8,8 @@
     <!--    **       CSS FILES   ****     -->
     <link rel="stylesheet" href="{{ asset('/css/layout.css') }}">
     <link rel="stylesheet" href="{{ asset('/css/nav.css') }}">
+    <link rel="stylesheet" href="{{ asset('/css/header_title.css') }}">
+    <link rel="stylesheet" href="{{ asset('/css/header_buttons.css') }}">
     <link rel="stylesheet" href="{{ asset('/css/all_establecimientos.css') }}">
     <link rel="stylesheet" href="{{ asset('/css/top_establecimientos.css') }}">
     <link rel="stylesheet" href="{{ asset('/css/mis_establecimientos.css') }}">
@@ -24,13 +26,17 @@
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
         rel="stylesheet">
   </head>
+
   <body>
     @include('layouts.nav')
     <div class="container">
         @yield('contenido')
     </div>
+    
+    <!--                JAVASCRIPT     -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script type="text/javascript" src="{{ asset('/js/nav.js') }}"></script>
     <script type="text/javascript" src="{{ asset('/js/slider.js') }}"></script>
   </body>
+
 </html>

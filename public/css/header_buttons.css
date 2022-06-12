@@ -1,37 +1,10 @@
-body{
-    margin: 0;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 15px;
-    color:000000;
-    line-height: 1.6;
-    overflow-y: scroll;
-    background:linear-gradient(90deg, rgba(2,0,36,1) 0%,
-    rgba(195,246,81,1) 0%, rgba(0,212,255,1) 100%) ;
-}
-
-*,
-*:after,
-*:before{
-    box-sizing: border-box;
-}
-
-
-/*        **LAYOUT BLADE      */
-
-
 .catalog{
     padding:100px 0;
 }
 
-.header_title{
-    text-align: center;
-    margin: 40px 0 auto;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: bold;
-    text-transform: uppercase;
-    font-size: 48px;
-    color: white;
-}
+
+
+
 
 .catalog_filter{
     display: flex;
@@ -74,10 +47,41 @@ body{
     border-right: 0;
 }
 
+@media (max-width:992px){
+    .filter_btn{
+        font-size: 17px;
+    }
 
 
+}
 
+@media(max-width:768px){
+    .part_header{
+        margin: 0 10px;
+    }
+    
+    .catalog_filter{
+        width: 500px;
+        max-width: 100%;
+        margin: 0 auto;
+    }
 
+    .filter_wrapper{
+        flex-wrap:wrap;
+        width: 100%;
+    }
 
+    .filter_item{
+        width: 50%;
+        flex-grow: 1;
+    }
 
+    .filter_btn{
+        width: 100%;
+        border-top: 1px solid #e5e5e5;
+    }
 
+    .filter_item:nth-of-type(even) .filter_btn{
+        border-right: 0;
+    }
+}

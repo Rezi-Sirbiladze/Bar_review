@@ -4,28 +4,39 @@
 
 @section('contenido')
 
-<div class="row">
-    <h1>Valorar establecimiento - {{$Establecimiento}}</h1>
-        <form method="post" action="{{ route('mis_valoraciones.store') }}"> 
+<div class="container_establecimiento">
+    <h1 class="header_title">Valorar {{$Establecimiento->name}}</h1>
+    <div class="content_establecimiento">
+        <form method="post" class="edit_establecimiento" action="{{ route('mis_valoraciones.store') }}"> 
         @csrf
-            <div class="col-auto">
-                <label class="form-label" for="customRange1">Nota</label>
-                <div class="range">
-                <input type="range" class="form-range" id="nota" name="nota" />
-            </div>
-                <div class="mb-3">
-                    <label for="puntos_pos" class="form-label">Puntos positivos</label>
-                    <textarea class="form-control" id="puntos_pos" name="puntos_pos" rows="3"></textarea>
+                <div class="group_edit estable_range_price">
+                    <label class="form-label" for="customRange1">Nota</label>
+                    <div class="range_slider">
+                        <input type="range" class="form-range slider" id="precios"
+                        min="0" max="10" name="nota"/>
+                        
+                        <div class="slider_thumb">
+                            <div class="tooltip"></div>
+                        </div>
+                        <div class="progress"></div>
+                    </div>
                 </div>
-                <div class="mb-3">
-                    <label for="puntos_neg" class="form-label">Puntos positivos</label>
-                    <textarea class="form-control" id="puntos_neg" name="puntos_neg" rows="3"></textarea>
+                <div class="group_edit estable_nombre">
+                    <label for="name" class="form-label">Puntos positivos</label>
+                    <input required autocomplete="off" name="puntos_pos" id="puntos_pos" class="form-control" type="text">
                 </div>
-                <div class="col-auto">
-                <input type="hidden" name="establecimiento_id" value="{{$Establecimiento->id}}">
-                <button type="submit" class="btn btn-primary mb-3">Confirm</button>
+                <div class="group_edit estable_nombre">
+                    <label for="name" class="form-label">Puntos negativos</label>
+                    <input required autocomplete="off" name="puntos_neg" id="puntos_pos" class="form-control" type="text">
+                </div>
+                
+                <div class="group_edit group_button_edit">
+                    <input type="hidden" name="establecimiento_id" value="{{$Establecimiento->id}}">
+                    <button type="submit" class="btn_save">Confirmar</button>
+                </div>
             </div>
         </form>
+    </div>
 </div>
 
 @endsection

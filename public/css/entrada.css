@@ -387,7 +387,7 @@ h1{
 
 .contacts{
     background-color: #f8f8f8;
-    padding: 65px;
+    padding: 65px 65px 0px 65px;
 }
 
 .footer_sec1 .logo{
@@ -527,6 +527,14 @@ h1{
     height: 100%;
 }
 
+
+/*         **COPYRIGHT    **/
+.copyright{
+    padding: 20px 0;
+    border-top: 2px solid #e5e5e5;
+    text-align: center;
+    font-size: 14px;
+}
 
 
 
