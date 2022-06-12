@@ -3,6 +3,10 @@
 @section('titulo','Valorar establecimiento')
 
 @section('contenido')
+<div class="container">
+    <h1 class="header_establecimientos">Valorar establecimiento</h1>
+    <div class="content_establecimiento">
+        <div class="edit_establecimiento" >
 
 <div class="container_establecimiento">
     <h1 class="header_title">Valorar {{$Establecimiento->name}}</h1>

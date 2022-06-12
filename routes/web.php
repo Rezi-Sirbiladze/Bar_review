@@ -15,19 +15,8 @@ use App\Http\Controllers\ValoracionController;
 |
 */
 
-Route::get('/', function () {
-    return view('entrada');
-});
+Route::get('/', [EstablecimientoController::class, 'indexEntrada'])->name('entrada');
 
-Route::get('/entrada', function () {
-    return view('entrada');
-})->name('entrada');
-
-/*     prueba si funciona login  */
-
-Route::get('/entrar', function () {
-    return view('login');
-});
 
 Route::get('/establecimientos', [EstablecimientoController::class, 'indexAll'])->name('establecimientos')->middleware(['auth']);
 Route::get('/establecimientos_ranking', [EstablecimientoController::class, 'indexRanking'])->name('establecimientos_ranking')->middleware(['auth']);
@@ -45,6 +34,14 @@ Route::resource('/mis_valoraciones', ValoracionController::class)->middleware(['
 Route::get('/lista_restaurantes', function () {
     return view('lista_restaurantes');
 });
+
+/*     prueba si funciona login  */
+
+Route::get('/entrar', function () {
+    return view('login');
+});
+
+/* **************************    */
 
 Route::get('/dashboard', function () {
     return view('dashboard');
