@@ -7,7 +7,7 @@
 <div class="container">
     <h1 class="header_establecimientos">Establecimiento</h1>
     <div class="content_establecimiento">
-        <form class="edit_establecimiento" method="POST" action="">
+        <div class="edit_establecimiento">
             <div class="group_edit estable_nombre">
                 <label for="name" class="form-label">Nombre de establecimiento </label>
                 <p>{{$Establecimiento->name}}</p>
@@ -15,7 +15,7 @@
 
             <div class="group_edit estable_description">
                 <label for="description" class="form-label">Descripcion</label>
-                <input required autocomplete="off" name="description" class="form-control" type="text">
+                <p>{{$Establecimiento->descripcion}}</p>
             </div>
 
             <div class="group_edit estable_range_price">
@@ -52,7 +52,8 @@
             </div>
             
 
-        </form>
+
+        </div>
     </div>
 </div>
 @endsection

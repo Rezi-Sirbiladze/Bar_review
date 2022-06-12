@@ -67,6 +67,7 @@ class EstablecimientoController extends Controller
         $establecimiento = new Establecimiento(
             ["user_id" => Auth::id(),
              "name" => $request["name"],
+             "descripcion" => $request["descripcion"],
              "precios" => $request["precios"],
              "sol_esp" => $request["sol_esp"],
              "horario" => $request["horario"],
@@ -93,6 +94,7 @@ class EstablecimientoController extends Controller
         Establecimiento::where("id", $id)->update(
             ["user_id" => Auth::id(),
             "name" => $request["name"],
+            "descripcion" => $request["descripcion"],
             "precios" => $request["precios"],
             "sol_esp" => $request["sol_esp"],
             "horario" => $request["horario"],

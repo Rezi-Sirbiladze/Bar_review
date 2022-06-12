@@ -18,7 +18,7 @@
                                 <div style="padding-left: 10%">
                                     <p><b>Creado</b> {{$item->created_at}}</p>
                                     <p><b>Ubicación</b> {{$item->ubicacion}}</p>
-                                        @if ( null !== $item->valoracionesAVG() )
+                                        @if ( isset($item->valoracionesAVG()[0]) )
                                         <p><b>Valoración</b> {{$item->valoracionesAVG()[0]->media_nota}}</p>
                                         @endif
                                     </div>

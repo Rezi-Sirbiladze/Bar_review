@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\EstablecimientoController;
 use App\Http\Controllers\ValoracionController;
+use App\Http\Controllers\AjaxController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,6 +17,7 @@ use App\Http\Controllers\ValoracionController;
 */
 
 Route::get('/', [EstablecimientoController::class, 'indexEntrada'])->name('entrada');
+Route::get('JqueryAjax_ordenar',[AjaxController::class,'index'])->name('JqueryAjax_ordenar');
 
 
 Route::get('/establecimientos', [EstablecimientoController::class, 'indexAll'])->name('establecimientos')->middleware(['auth']);
