@@ -18,7 +18,7 @@ class EstablecimientoController extends Controller
         ->selectRaw('establecimientos.id, avg(valoraciones.nota) AS media_nota')
         ->groupBy(['establecimientos.id'])
         ->orderByDesc('media_nota')
-        ->take(3)
+        ->take(10)
         ->get();
 
         $estatisticas = array (

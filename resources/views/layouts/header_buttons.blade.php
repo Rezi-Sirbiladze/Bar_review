@@ -1,6 +1,6 @@
 
     <div class="part_header">
-        <h2 class="header_title">Lista restaurantes</h2>
+        <h2 class="header_title">Ranking de restaurantes</h2>
         <nav class="catalog_filter">
             <ul class="filter_wrapper">
                 <li class="filter_item">
