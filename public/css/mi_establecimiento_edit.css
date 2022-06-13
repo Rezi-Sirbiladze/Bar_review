@@ -14,6 +14,10 @@
     margin: 40px 40px 60px 40px;
 }
 
+.group_button_edit{
+    margin: 40px;
+}
+
 .group_edit label{
     font-family: 'Montserrat', sans-serif;
     color: white;
@@ -279,6 +283,7 @@
 
 .form_delete{
     width: 180px;
+    margin: 0 auto 20px;
 }
 
 .btn_delete{
@@ -354,6 +359,10 @@ label.label_info{
         margin: 15px 15px 30px 15px;
     }
 
+    .group_button_edit{
+        margin:0;
+    }
+
     .group_edit label{
         font-size: 20px;
     }
@@ -368,7 +377,7 @@ label.label_info{
         display:block;
     }
     
-    .group_button_edit .btn_save, .group_button_edit .btn_back, .group_button_edit .btn_delete{
+    .group_button_edit .btn_save, .group_button_edit .btn_back{
         display:block;
         margin: 10px auto;
 
