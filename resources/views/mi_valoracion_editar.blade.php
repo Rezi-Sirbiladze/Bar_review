@@ -37,12 +37,13 @@
                 <input type="hidden" name="valoracion_id" value="{{$valoracion->id}}">
                 <button class="btn_save">Guardar</button>
                 <a class="btn_back" href="{{route("establecimientos")}}">Volver</a>
+                
+                <form class="form_delete" action="{{route("mis_valoraciones.destroy", [$valoracion->id])}}" method="post">
+                    @method("delete")
+                    @csrf
+                    <button type="submit" class="btn btn_delete">Eliminar</button>
+                </form>
             </div>
-        </form>
-        <form action="{{route("mis_valoraciones.destroy", [$valoracion->id])}}" method="post">
-            @method("delete")
-            @csrf
-            <button type="submit" class="btn btn_save">Eliminar</button>
         </form>
     </div>
     </div>

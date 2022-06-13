@@ -4,9 +4,9 @@
             <nav class="nav" id="nav">
                 <form method="POST" action="{{ route('logout') }}">
                 @csrf
-                <a class="menu" href="{{ route('entrada') }}">Entrada</a>
-                <a class="menu" href="{{ route('establecimientos_ranking') }}">Ranking establecimientos</a>
-                <a class="menu" href="{{ route('establecimientos') }}">Todos los establecimientos</a>
+                <a class="menu" href="{{ route('entrada') }}">Start</a>
+                <a class="menu" href="{{ route('establecimientos_ranking') }}">My Bars</a>
+                <a class="menu" href="{{ route('establecimientos') }}">List Bars</a>
                 @if (Route::has('login'))
                     @auth
                         <a href="{{ url('/dashboard') }}" class="menu">Dashboard</a>

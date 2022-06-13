@@ -263,12 +263,30 @@
 }
 
 
-/*             **RANGO PRECIOS**       
+/*             **RANGO PRECIOS**       */
 
+.opinion{
+    margin-top: 20px;
+    border: 1px solid white;
+    border-radius: 40px;
+    padding: 3%;
+    color: white;
+}
 
+.opinion b{
+    text-transform: uppercase;
+}
 
-/*      **BOTONES GUARDAR VOLVER    */
-.btn_save, .btn_back{
+.form_delete{
+    width: 180px;
+}
+
+.btn_delete{
+    display:block;
+}
+
+/*      **BOTONES GUARDAR VOLVER ELIMINAR   */
+.btn_save, .btn_back, .btn_delete{
     text-decoration: none;
     padding: 10px 15px;
     font-size: 16px;
@@ -284,12 +302,12 @@
     transition: all .3s linear;
 }
 
-.btn_save:hover, .btn_back:hover{
+.btn_save:hover, .btn_back:hover, .btn_delete:hover{
     cursor:pointer;
     background-color: #49bba6;
     color: black;
 }
-/*      **BOTONES GUARDAR VOLVER    */
+/*      **BOTONES GUARDAR VOLVER ELIMINAR   */
 
 
 
@@ -303,6 +321,7 @@
 }
 
 label.label_info{
+    display:block;
     border-bottom: 1px solid white;
 }
 /*           **VER VALORACION**          */
@@ -349,10 +368,14 @@ label.label_info{
         display:block;
     }
     
-    .group_button_edit .btn_save, .group_button_edit .btn_back{
+    .group_button_edit .btn_save, .group_button_edit .btn_back, .group_button_edit .btn_delete{
         display:block;
         margin: 10px auto;
 
+    }
+
+    .group_button_edit .btn_delete{
+        height: 45px;
     }
 
     .group_button_edit .btn_save{
@@ -360,3 +383,6 @@ label.label_info{
     }
 
 }
+
+
+/* **********************RESPONSIVE*********************  */
