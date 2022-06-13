@@ -23,17 +23,16 @@
         <div class="popup" id="form_popup">
             <div class="popup_body">
                 <div class="popup_content">
-                    <form class="edit_establecimiento modal_create_bar" method="POST" action="">
-                        <a href="#" class="popup_close form_popup_close"><b>X</b></a>
-                        @method("PUT")
+                    <form class="edit_establecimiento modal_create_bar" action="{{ route('mis_establecimientos.store') }}" method="POST" action="">
                         @csrf
+                        <a href="#" class="popup_close form_popup_close"><b>X</b></a>
                         <div class="group_edit estable_nombre">
                             <label for="name" class="form-label">Nombre de establecimiento</label>
                             <input required value="" autocomplete="off" name="name" class="form-control" type="text">
                         </div>
                         <div class="group_edit estable_description">
                             <label for="description" class="form-label">Descripcion</label>
-                            <input required autocomplete="off" name="description" class="form-control" type="text">
+                            <input required autocomplete="off" name="descripcion" class="form-control" type="text">
                         </div>
             
                         <div class="group_edit estable_range_price">
@@ -84,7 +83,6 @@
                 </div>
             </div>
         </div>  
-            <!--      **VENTANA MODAL**      -->
 
         <div class="restaurant_list">
             @foreach ($establecimientos as $item)
@@ -98,8 +96,9 @@
                             <div style="padding-left: 10%">
                                     <p><b>Creado</b> {{$item->created_at}}</p>
                                     <p><b>Ubicación</b> {{$item->ubicacion}}</p>
+                                    <b>Valoración</b> 
                                     @if ( isset($item->valoracionesAVG()[0]) )
-                                      <b>Valoración</b> {{$item->valoracionesAVG()[0]->media_nota}}
+                                        {{$item->valoracionesAVG()[0]->media_nota}}
                                     @endif
                             </div>
                         </div>

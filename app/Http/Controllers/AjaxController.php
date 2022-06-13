@@ -18,7 +18,7 @@ class AjaxController extends Controller
                 ->selectRaw('establecimientos.id, establecimientos.created_at, establecimientos.ubicacion, establecimientos.name, avg(valoraciones.nota) AS media_nota')
                 ->groupBy(['establecimientos.id', "establecimientos.created_at", "establecimientos.ubicacion", "establecimientos.name"])
                 ->orderBy('establecimientos.name')
-                ->take(3)
+                ->take(10)
                 ->get();
 
 
@@ -29,7 +29,7 @@ class AjaxController extends Controller
             ->selectRaw('establecimientos.id, establecimientos.created_at, establecimientos.ubicacion, establecimientos.name, avg(valoraciones.nota) AS media_nota')
             ->groupBy(['establecimientos.id', "establecimientos.created_at", "establecimientos.ubicacion", "establecimientos.name"])
             ->orderByDesc('media_nota')
-            ->take(3)
+            ->take(10)
             ->get();
             return $TopEstablecimientos;
             break;
@@ -41,7 +41,7 @@ class AjaxController extends Controller
             ->join('valoraciones', 'valoraciones.establecimiento_id', '=', 'establecimientos.id')
             ->selectRaw('establecimientos.id, establecimientos.created_at, establecimientos.ubicacion, establecimientos.name, avg(valoraciones.nota) AS media_nota')
             ->groupBy(['establecimientos.id', "establecimientos.created_at", "establecimientos.ubicacion", "establecimientos.name"])
-            ->take(3)
+            ->take(10)
             ->get();
             return $TopEstablecimientos;
         break;

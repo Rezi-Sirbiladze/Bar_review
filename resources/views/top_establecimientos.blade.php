@@ -18,7 +18,7 @@
                                 <p><b>Nombre</b> {{$item->establecimientoPorId()->name}}</p>
                                 <p><b>Creado</b> {{substr($item->establecimientoPorId()->created_at, 0, 10)}}</p>
                                 <p><b>Ubicación</b> {{$item->establecimientoPorId()->ubicacion}}</p>
-                                    @if ( null !== $item->valoracionesAVG() )
+                                    @if (isset($item->valoracionesAVG()[0]) )
                                     <p><b>Valoración</b> {{substr($item->valoracionesAVG()[0]->media_nota, 0, 3)}}</p>
                                     @endif
                                 </div>
@@ -62,9 +62,7 @@
                                 <p><b>Nombre</b> ${element.name}</p>
                                 <p><b>Creado</b> ${element.created_at.substring(0,10)}</p>
                                 <p><b>Ubicación</b> ${element.ubicacion}</p>
-                                    @if ( null !== $item->valoracionesAVG() )
                                     <p><b>Valoración</b> ${element.media_nota.substring(0,3)}</p>
-                                    @endif
                                 </div>
                             </div>
 
