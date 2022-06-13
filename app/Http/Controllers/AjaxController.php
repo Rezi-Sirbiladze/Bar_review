@@ -17,7 +17,7 @@ class AjaxController extends Controller
                 ->join('valoraciones', 'valoraciones.establecimiento_id', '=', 'establecimientos.id')
                 ->selectRaw('establecimientos.id, establecimientos.created_at, establecimientos.ubicacion, establecimientos.name, avg(valoraciones.nota) AS media_nota')
                 ->groupBy(['establecimientos.id', "establecimientos.created_at", "establecimientos.ubicacion", "establecimientos.name"])
-                ->orderByDesc('establecimientos.name')
+                ->orderBy('establecimientos.name')
                 ->take(3)
                 ->get();
 
