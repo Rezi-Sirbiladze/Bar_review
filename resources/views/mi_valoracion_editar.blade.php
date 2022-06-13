@@ -5,8 +5,9 @@
 @section('contenido')
 <div class="container">
     <div class="content_establecimiento">
-        <h1 class="header_title">Editar Establecimiento</h1>
-        <form method="post" class="edit_establecimiento" action="{{route("mis_valoraciones.update", [$valoracion->id])}}"> 
+        <h1 class="header_title">Editar Establecimiento - {{$Establecimiento->name}}</h1>
+        <div class="edit_establecimiento">
+        <form method="post" action="{{route("mis_valoraciones.update", [$valoracion->id])}}"> 
             @method("PUT")
             @csrf
             <div class="group_edit estable_range_price">
@@ -36,15 +37,14 @@
                 <input type="hidden" name="valoracion_id" value="{{$valoracion->id}}">
                 <button class="btn_save">Guardar</button>
                 <a class="btn_back" href="{{route("establecimientos")}}">Volver</a>
-
-                <form action="{{route("mis_valoraciones.destroy", [$valoracion->id])}}" method="post">
-                    @method("delete")
-                    @csrf
-                    <button type="submit" class="btn btn_save">Eliminar</button>
-                </form>
             </div>
-
         </form>
+        <form action="{{route("mis_valoraciones.destroy", [$valoracion->id])}}" method="post">
+            @method("delete")
+            @csrf
+            <button type="submit" class="btn btn_save">Eliminar</button>
+        </form>
+    </div>
     </div>
 </div>
 @endsection

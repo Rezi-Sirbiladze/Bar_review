@@ -18,6 +18,7 @@
                 </ul>
             </nav>
         </div>
+
                 <!--      **VENTANA MODAL**      -->
         <div class="popup" id="form_popup">
             <div class="popup_body">
@@ -93,13 +94,16 @@
                         
                         <div class="product_content">
                             <h3 class="product_title">{{$item->name}}</h3>
+
                             <div style="padding-left: 10%">
                                     <p><b>Creado</b> {{$item->created_at}}</p>
                                     <p><b>Ubicación</b> {{$item->ubicacion}}</p>
-                                        @if ( null !== $item->valoracionesAVG() )
-                                        @endif
+                                    @if ( isset($item->valoracionesAVG()[0]) )
+                                      <b>Valoración</b> {{$item->valoracionesAVG()[0]->media_nota}}
+                                    @endif
                             </div>
                         </div>
+
 
                             <div class="ranking_rest_footer">
                                 <a class="btn_editar" href="{{route("mis_establecimientos.edit",[$item])}}">
