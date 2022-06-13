@@ -11,7 +11,7 @@
 .restaurant_item{
     width: 300px;
     margin: 0 20px 90px 20px;
-    height: 500px;
+    height: 550px;
     background-color: white;
     border-radius: 10px;
     transition: background .3s linear;
@@ -45,7 +45,7 @@
 
 .product_content{
     margin-bottom: 25px;
-    
+    height: 150px;
 }
 
 .product_description{
@@ -63,8 +63,7 @@
     margin-top: 80px;
     margin-bottom: 20px;
     opacity: 0;
-    display: flex;
-    justify-content: center;
+
     transition: opacity .2s linear;
 }
 
@@ -73,10 +72,11 @@
 }
 
 .btn_valorar, .btn_check_valorar{
-    display: inline-block;
+    display: block;
+    margin: 0 auto 15px;
     text-decoration: none;
     padding: 5px 15px;
-    width: 180px;
+    width: 150px;
     text-align: center;
     border-radius: 5px;
     background-color: #95e1d3;
