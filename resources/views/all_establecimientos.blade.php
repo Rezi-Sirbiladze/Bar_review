@@ -7,7 +7,6 @@
 
 <div class="catalog">
     <div class="container">
-        @include('layouts.header_buttons')
         <div id="resultado_busqueda" class="restaurant_list">
             @foreach ($establecimientos as $item)
                 <div class="restaurant_item">
@@ -28,7 +27,7 @@
                                 <a class="btn_check_valorar" href="{{route("mis_establecimientos.show", $item->id)}}">Ver</a>
                                 @if ($item->myValoracion() == 1)
                                 <a class="btn_check_valorar" href="{{route("mis_valoraciones.edit",$item->id)}}">
-                                    Ver valoración
+                                    Valoración
                                 </a>
                                 @else
                                     <a class="btn_valorar" href="{{route("valorar_establecimiento",$item->id)}}">
