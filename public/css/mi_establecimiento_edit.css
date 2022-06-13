@@ -289,9 +289,23 @@
     background-color: #49bba6;
     color: black;
 }
-
-
 /*      **BOTONES GUARDAR VOLVER    */
+
+
+
+/*           **VER VALORACION**          */
+.group_edit_info{
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    font-size: 17px;
+    font-weight: 600;
+
+}
+
+label.label_info{
+    border-bottom: 1px solid white;
+}
+/*           **VER VALORACION**          */
 
 
 
@@ -325,9 +339,24 @@
         font-size: 20px;
     }
 
-    .estable_nombre input, .estable_description input{
+    .estable_nombre input, .estable_description input,
+    .estable_workhours input, .estable_location input{
         padding: 10px 15px;
         width: 300px;
+    }
+    
+    .group_button_edit{
+        display:block;
+    }
+    
+    .group_button_edit .btn_save, .group_button_edit .btn_back{
+        display:block;
+        margin: 10px auto;
+
+    }
+
+    .group_button_edit .btn_save{
+        height: 45px;
     }
 
 }

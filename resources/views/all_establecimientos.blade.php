@@ -19,9 +19,8 @@
                                     <p><b>Creado</b> {{$item->created_at}}</p>
                                     <p><b>Ubicación</b> {{$item->ubicacion}}</p>
                                         @if ( null !== $item->valoracionesAVG() )
-                                        <p><b>Valoración</b> {{$item->valoracionesAVG()[0]->media_nota}}</p>
                                         @endif
-                                    </div>
+                                </div>
                             </div>
 
                             <div class="product_footer">
@@ -39,8 +38,6 @@
                 </div>
             @endforeach
         </div>
-
-
     </div>
 </div> 
 @endsection

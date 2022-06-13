@@ -46,7 +46,7 @@
     </div>
 
         <!--      **VENTANA MODAL**      -->
-        <div class="popup" id="popup">
+    <div class="popup" id="popup">
         <div class="popup_body">
             <div class="popup_content">
                 <a href="#" class="popup_close"><b>X</b></a>
@@ -57,7 +57,9 @@
             </div>
         </div>
     </div>  
+        <!--      **VENTANA MODAL**      -->
 
+        
     <!--      BLOQUE SOBRE NOSOTROS        -->
     <section class="about">
         <div class="about-container">

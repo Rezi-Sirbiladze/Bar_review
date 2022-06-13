@@ -5,21 +5,21 @@
 
 @section('contenido')
 <div class="container">
-    <h1 class="header_establecimientos">Establecimiento</h1>
+    <h1 class="header_title">Establecimiento</h1>
     <div class="content_establecimiento">
         <form class="edit_establecimiento" method="POST" action="">
             <div class="group_edit estable_nombre">
-                <label for="name" class="form-label">Nombre de establecimiento </label>
-                <p>{{$Establecimiento->name}}</p>
+                <label class="label_info" for="name" class="form-label">Nombre de establecimiento </label>
+                <p class="group_edit_info estable_nombre_info">{{$Establecimiento->name}}</p>
             </div>
 
             <div class="group_edit estable_description">
-                <label for="description" class="form-label">Descripcion</label>
-                <input required autocomplete="off" name="description" class="form-control" type="text">
+                <label class="label_info" for="description" class="form-label">Descripcion</label>
+                <p class="group_edit_info">aqui va descripcion</p>
             </div>
 
             <div class="group_edit estable_range_price">
-                <label class="form-label" for="customRange1">Precios menu una persona</label>
+                <label class="label_info" class="form-label" for="customRange1">Precios menu una persona</label>
                 <div class="range_slider">
                     <input type="range" class="form-range slider" id="precios"
                     min="1" max="50" name="precios" value="{{$Establecimiento->precios}}" disabled/>
@@ -32,23 +32,23 @@
             </div>
 
             <div class="group_edit estable_preferences">
-                <label class="form-label" for="customRange1">Solicitudes especiales </label>
-                <p>{{$Establecimiento->sol_esp}}</p>
+                <label class="label_info" class="form-label" for="customRange1">Solicitudes especiales </label>
+                <p class="group_edit_info">{{$Establecimiento->sol_esp}}</p>
             </div>
 
             <div class="group_edit estable_workhours">
-                <label for="horario" class="form-label">Horario </label>
-                <p>{{$Establecimiento->horario}}</p>
+                <label class="label_info" for="horario" class="form-label">Horario </label>
+                <p class="group_edit_info">{{$Establecimiento->horario}}</p>
             </div>
 
             <div class="group_edit estable_location">
-                <label for="ubicacion" class="form-label">Ubicación</label>
-                <p>{{$Establecimiento->ubicacion}}</p>
+                <label class="label_info" for="ubicacion" class="form-label">Ubicación</label>
+                <p class="group_edit_info">{{$Establecimiento->ubicacion}}</p>
             </div>
 
             <div class="group_edit">
-                <label for="valoracion" class="form-label">Media de valoración </label>
-                <p>{{$Establecimiento->valoracionesAVG()[0]->media_nota}}</p>
+                <label class="label_info" for="valoracion" class="form-label">Media de valoración </label>
+                <p class="group_edit_info">{{$Establecimiento->valoracionesAVG()[0]->media_nota}}</p>
             </div>
             
 
