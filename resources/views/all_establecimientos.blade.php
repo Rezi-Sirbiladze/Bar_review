@@ -21,7 +21,7 @@
                                         @if ( isset($item->valoracionesAVG()[0]) )
                                         <p><b>Valoración</b> {{substr($item->valoracionesAVG()[0]->media_nota, 0, 3)}}</p>
                                         @endif
-                                    </div>
+                                </div>
                             </div>
 
                             <div class="product_footer">

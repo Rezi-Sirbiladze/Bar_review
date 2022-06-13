@@ -1,3 +1,13 @@
+.filter_btn a{
+    text-decoration: none;
+    color: white;
+    transition: all .3s linear;
+}
+
+.filter_btn:hover a{
+    color: black;
+}
+
 .ranking_rest_footer{
     display:grid;
     grid-template-columns: 1fr;

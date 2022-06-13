@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="{{ asset('/css/nav.css') }}">
     <link rel="stylesheet" href="{{ asset('/css/header_title.css') }}">
     <link rel="stylesheet" href="{{ asset('/css/header_buttons.css') }}">
+    <link rel="stylesheet" href="{{ asset('/css/crear_bar_modal.css') }}">
     <link rel="stylesheet" href="{{ asset('/css/all_establecimientos.css') }}">
     <link rel="stylesheet" href="{{ asset('/css/top_establecimientos.css') }}">
     <link rel="stylesheet" href="{{ asset('/css/mis_establecimientos.css') }}">

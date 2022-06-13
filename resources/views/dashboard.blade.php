@@ -5,7 +5,7 @@
 @section('contenido')
 <div class="container">
 
-        <h1 class="header_establecimientos">Dashboard</h1>
+        <h1 class="header_establecimientos">Prueba Dashboard</h1>
         <div class="group_edit">
             <label>You're logged in!</label>
             <br>
