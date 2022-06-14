@@ -5,7 +5,7 @@
                 <form method="POST" action="{{ route('logout') }}">
                 @csrf
                 <a class="menu" href="{{ route('entrada') }}">Start</a>
-                <a class="menu" href="{{ route('establecimientos_ranking') }}">My Bars</a>
+                <a class="menu" href="{{ route('establecimientos_ranking') }}">Top Bars</a>
                 <a class="menu" href="{{ route('establecimientos') }}">List Bars</a>
                 @if (Route::has('login'))
                     @auth
