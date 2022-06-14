@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\Auth;
 
 class AjaxController extends Controller
 {
-    public function index(Request $request)
+    public function buscar(Request $request)
     {
         switch ($request["orden"]) {
             case "1":
