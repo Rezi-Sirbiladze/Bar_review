@@ -16,7 +16,7 @@
             <div class="group_edit estable_description">
 
                 <label for="description" class="form-label label_info">Descripcion</label>
-                <p>{{$Establecimiento->descripcion}}</p>
+                <p class="group_edit_info">{{$Establecimiento->descripcion}}</p>
             </div>
 
             <div class="group_edit estable_range_price">
@@ -51,7 +51,7 @@
 
                 <label for="valoracion" class="label_info">Media de valoración </label>
                 @if (isset($Establecimiento->valoracionesAVG()[0]))
-                    <p class="group_edit_info">{{$Establecimiento->valoracionesAVG()[0]->media_nota}}</p>
+                    <p class="group_edit_info">{{substr($Establecimiento->valoracionesAVG()[0]->media_nota, 0, 3)}}</p>
                 @else
                     <p class="group_edit_info">Sin notas</p>
                 @endif

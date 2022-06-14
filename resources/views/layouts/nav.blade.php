@@ -9,6 +9,9 @@
                 <a class="menu" href="{{ route('establecimientos') }}">List Bars</a>
                 @if (Route::has('login'))
                     @auth
+                        @if (Auth::user()->role == "empresa")
+                            <a href="{{route('mis_establecimientos.index')}}" class="menu">My Bars</a>
+                        @endif
                         <a href="{{ url('/dashboard') }}" class="menu">Dashboard</a>
                         <a href="" onclick="event.preventDefault(); this.closest('form').submit();" class="menu">Logout</a>
                     @else
