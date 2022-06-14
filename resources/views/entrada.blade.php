@@ -38,7 +38,7 @@
             </div>
             <div class="slider">
                 <div href="#" class="item"><b>01</b><span class="slider_text">Intro</span></div>
-                <div href="#" class="item"><b>02</b><span class="slider_text">About</span></div>
+                <div href="#" class="item"><b>02</b><span class="slider_text">About Us</span></div>
                 <div href="#" class="item"><b>03</b><span class="slider_text">Achievements</span></div>
                 <div href="#" class="item"><b>04</b><span class="slider_text">Contact</span></div>
             </div>
@@ -63,11 +63,10 @@
     <!--      BLOQUE SOBRE NOSOTROS        -->
     <section class="about">
         <div class="about-container">
-            <h2 class="title_description">Sobre nosotros</h2>
+            <h2 class="title_description">About Us</h2>
+            <br>
             <div class="description">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                Corporis inventore laborum ea id sint eius commodi optio iusto sapiente doloremque, provident quas quibusdam, 
-                nesciunt esse praesentium maxime voluptatem repudiandae! Exercitationem.
+                Bar review es la aplicación que te permite escoger el mejor establecimiento para tener la experiencia más positiva y no perder tiempo buscando diferentes restaurantes de tu ciudad. Regístrate en nuestra app y obtén acceso a todos establecimientos, valóralos y escoge el que más te ha gustado para ir y probarlo.
             </div>
 
             <div class="about_rate">
@@ -159,9 +158,7 @@
                 <div class="footer_sec1">
                     <div class="logo">BAR Review</div>
                     <div class="footer_text">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                        Doloribus rem hic harum eligendi possimus temporibus, accusantium sit id nisi iste eveniet iusto, 
-                        eos debitis sint nobis impedit est ab. Officia!
+                        Bar review es la aplicación que te permite escoger el mejor establecimiento para tener la experiencia más positiva y no perder tiempo buscando diferentes restaurantes de tu ciudad. Regístrate en nuestra app y obtén acceso a todos establecimientos, valóralos y escoge el que más te ha gustado para ir y probarlo.
                     </div>
                 <!--       SECCION 1  SUBSCRIBE      -->
                     <div class="footer_social">
