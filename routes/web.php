@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\EstablecimientoController;
 use App\Http\Controllers\ValoracionController;
 use App\Http\Controllers\AjaxController;
+use App\Http\Controllers\Controller;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,7 +24,7 @@ Route::get('JqueryAjax_ordenar',[AjaxController::class,'index'])->name('JqueryAj
 Route::get('/establecimientos', [EstablecimientoController::class, 'indexAll'])->name('establecimientos')->middleware(['auth']);
 Route::get('/establecimientos_ranking', [EstablecimientoController::class, 'indexRanking'])->name('establecimientos_ranking')->middleware(['auth']);
 
-Route::resource('/mis_establecimientos', EstablecimientoController::class)->middleware(['auth']);
+Route::resource('/mis_establecimientos', EstablecimientoController::class)->name('*', 'mis_establecimientos')->middleware(['auth']);
 
 Route::get('/valorar/{id}', [ValoracionController::class, 'indexValorar'])->name('valorar_establecimiento')->middleware(['auth']);
 
@@ -45,8 +46,6 @@ Route::get('/entrar', function () {
 
 /* **************************    */
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth'])->name('dashboard');
+Route::get('/dashboard', [Controller::class, 'index'])->middleware(['auth'])->name('dashboard');
 
 require __DIR__.'/auth.php';
