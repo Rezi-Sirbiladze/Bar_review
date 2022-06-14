@@ -18,7 +18,7 @@ use App\Http\Controllers\Controller;
 */
 
 Route::get('/', [EstablecimientoController::class, 'indexEntrada'])->name('entrada');
-Route::get('JqueryAjax_ordenar',[AjaxController::class,'index'])->name('JqueryAjax_ordenar');
+Route::get('JqueryAjax_ordenar',[AjaxController::class,'buscar'])->name('JqueryAjax_ordenar');
 
 
 Route::get('/establecimientos', [EstablecimientoController::class, 'indexAll'])->name('establecimientos')->middleware(['auth']);
